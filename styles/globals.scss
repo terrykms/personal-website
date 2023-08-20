@@ -1,0 +1,32 @@
+@use './variables' as v;
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Oswald&display=swap');
+
+
+* {
+  box-sizing: border-box;
+  font-family: 'Open Sans', 'sans-serif';
+  color: v.$dark-color
+}
+
+body {
+  background-color: v.$vlight-color;
+  margin: 0;
+}
+
+h1,
+h2,
+h3 {
+  font-family: 'Oswald', 'Open Sans', 'sans-serif';
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  font: inherit;
+  cursor: pointer;
+}
+
+
+

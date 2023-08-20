@@ -1,0 +1,45 @@
+@use '../../styles/variables' as v;
+
+.header {
+    display: flex;
+    width: 100%;
+    height: 6rem;
+    background-color: v.$dark-color;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10%;
+}
+
+.header ul {
+    list-style: none;
+    display: flex;
+    align-items: baseline;
+    margin: 0;
+    padding: 0;
+    gap: 0.25rem;
+  }
+  
+  .header li {
+    margin: 0 ;
+  }
+  
+  .header a {
+    color: v.$light-blue;
+    font-size: v.$size-4;
+  }
+  
+  .header a:hover,
+  .header a:active,
+  .header a.active {
+    color: v.$vlight-blue;
+  }
+  
+  @media (min-width: 768px) {
+    .header ul {
+      gap: 1.5rem;
+    }
+  
+    .header a {
+      font-size: v.$size-5;
+    }
+  }
