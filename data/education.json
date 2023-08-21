@@ -1,0 +1,27 @@
+{
+    "education": [
+        {
+            "school": "Nanyang Technological University",
+            "level": "B. Eng. (Chemical and Biomolecular Engineering)",
+            "grade": "Current CGPA: 4.68 (Expected Highest Honours)",
+            "startDate": "Aug 2020",
+            "endDate": "Jul 2026",
+            "image": "ntu.png",
+            "descriptions": [
+                "CN Yang Scholar",
+                "AY20/21 Dean's List Recipient"
+            ]
+        }, 
+        {
+            "school": "Victoria Junior College",
+            "level": "GCE 'A' Levels (Science)",
+            "grade": "88.75 Rank Points",
+            "startDate": "Jan 2018",
+            "endDate": "Dec 2019",
+            "image": "vjc.png",
+            "descriptions": [
+                "H3 Chemistry (Distinction)"
+            ]  
+        }
+    ]
+}

@@ -40,6 +40,10 @@ button {
   cursor: pointer;
 }
 
+section {
+  margin: 0 0 50px 0;
+}
+
 @media (min-width: 768px) {
   h1 {
     font-size: v.$size-16
@@ -54,7 +58,11 @@ button {
   }
 
   main {
-    margin: 0px 100px;
+    margin: 0px 200px;
+  }
+
+  section {
+    margin: 0 0 100px 0;
   }
 
 

@@ -16,14 +16,14 @@ const ExperienceBox = (props) => {
       <div className={classes.content}>
         <div className={classes.header}>
           <h3>{experience.position}</h3>
+          <span>{experience.company}</span>
           <span>
             {experience.startDate} - {experience.endDate}
           </span>
-          <span>{experience.company}</span>
         </div>
         <ul>
           {experience.descriptions.map((description) => (
-            <li>{description}</li>
+            <li key={description}>{description}</li>
           ))}
         </ul>
       </div>

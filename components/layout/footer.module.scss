@@ -3,15 +3,21 @@
 .footer {
     background-color: v.$light-color;
     height: 5rem;
-    display: grid;
-    grid-template-columns: 1fr;
-    margin: 20px 0 0 0;
-    padding: 20px 0 0 0;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    padding: 20px 50px 0;
+
+    .logos {
+        display: flex;
+        
+        // gap: 10px;
+    }
 }
 
 @media (min-width: 768px) {
     .footer{
-        grid-template-columns: 1fr 1fr;
+        padding: 20px 200px 0;
 
     }
   }
