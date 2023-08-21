@@ -1,5 +1,5 @@
 @use './variables' as v;
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Oswald&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Oswald&display=swap');
 
 
 * {
@@ -13,10 +13,22 @@ body {
   margin: 0;
 }
 
+main {
+  margin: 0px 20px;
+}
+
 h1,
 h2,
 h3 {
   font-family: 'Oswald', 'Open Sans', 'sans-serif';
+}
+
+h1 {
+  font-size: v.$size-8
+}
+
+h2 {
+  font-size: v.$size-6
 }
 
 a {
@@ -26,6 +38,26 @@ a {
 button {
   font: inherit;
   cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  h1 {
+    font-size: v.$size-16
+  }
+
+  h2 {
+    font-size: v.$size-8;
+  }
+
+  p {
+    font-size: v.$size-5
+  }
+
+  main {
+    margin: 0px 100px;
+  }
+
+
 }
 
 

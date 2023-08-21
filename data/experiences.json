@@ -1,0 +1,39 @@
+{
+    "experiences": [
+        {
+            "position": "Assistant Engineer, Data Analytics (Intern)",
+            "company": "Air Liquide",
+            "startDate": "Jan 2023",
+            "endDate": "Jun 2023",
+            "image": "air-liquide.jpeg",
+            "descriptions": [
+                "Revamped Power BI dashboard data queries with SQL and automated data export into Google Sheets through gateway connections and Google Apps Script, saving thousands of costs in man-hours by eliminating need for daily manual entry.",
+                "Successfully identified noisy time-series data through Hilbert-Huang Transform, bringing huge potential in quantification of underlying noise level in data which was previously only possible with visual inspection.",
+                "Spearheaded data reduction project by suggesting new algorithm and brought about more than 95% compression in process data while maintaining fidelity score of at least 90%.",
+                "Implemented predictive maintenance analyses through statistical process control for various process parameters, resulting in significant early detection of unusual events by five days.",
+                "Refined how statistical process control (SPC) was implemented for cyclic processes through rigorous data analysis, leading to successful detection of transmitter issues for early rectification."
+            ]
+        },
+        {
+            "position": "Software Development Intern",
+            "company": "El Pando",
+            "startDate": "May 2022",
+            "endDate": "Jul 2022",
+            "image": "el-pando.jpeg",
+            "descriptions": [
+                "Designed the Front-end of the new company website with added interactivity and responsive design, utilising skills such as jQuery and Bootstrap 5.",
+                "Handled ASP.NET Code-behind approach, which was implemented by the company for their customized software services for different clients."
+            ]
+        },
+        {
+            "position": "Research Intern (AI for Soundscapes) @ Digital Signal Processing Laboratory",
+            "company": "Nanyang Technological University",
+            "startDate": "Jan 2022",
+            "endDate": "May 2022",
+            "image": "ntu.png",
+            "descriptions": [
+                "AI For Soundscapes - Developed a probabilistic neural network, incorporating a bivariate normal distribution loss function to predict the associated perceptual of soundscapes."
+            ]
+        }
+    ]
+}

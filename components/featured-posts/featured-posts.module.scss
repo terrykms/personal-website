@@ -1,0 +1,17 @@
+@use '../../styles/variables' as v;
+
+.container {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+
+    h2 {
+        font-size: v.$size-8
+    }
+
+    .posts {
+        display: grid;
+        grid-template-columns: 1fr 1fr;        
+        gap: 30px
+    }
+}
