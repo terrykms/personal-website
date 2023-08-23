@@ -12,16 +12,16 @@ const Footer = () => {
           <Image
             src={"/icons/linkedin.svg"}
             alt="LinkedIn Logo"
-            width={50}
-            height={50}
+            width={40}
+            height={40}
           />
         </a>
         <a href="https://github.com/terrykms" target="_blank">
           <Image
             src={"/icons/github.svg"}
             alt="Github Logo"
-            width={50}
-            height={50}
+            width={40}
+            height={40}
           />
         </a>
       </div>

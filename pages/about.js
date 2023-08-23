@@ -18,8 +18,8 @@ const AboutPage = (props) => {
         />
       </Head>
       <AboutMe />
-      <Experiences data={experienceData} />
-      <Education data={educationData} />
+      <Experiences data={experienceData.experiences} />
+      <Education data={educationData.education} />
     </Fragment>
   );
 };

@@ -1,0 +1,34 @@
+{
+    "projects": [
+        {
+            "title": "Classifications of Soundscapes with Deep Learning Algorithm",
+            "summary": "Implemented convolutional neural network (CNN) architecture as a predictive model for soundscape affective responses.",
+            "keywords":[
+                "Convolutional Neural Networks", "Audio Analysis"
+            ]
+        },
+        {
+            "title": "Video Summarisation in Surveillance and Security Systems",
+            "summary": "Experimented with existing convolutional neural networks on human activity recognition (HAR) with Tensorflow/Keras.",
+            "keywords":[
+                "Human Activity Recognition", "Convolutional Neural Networks"
+            ]
+        }, 
+        {
+            "title": "Emissions from Rare-Earth (RE) Ions by the Energy Transfer from ZnO Nanocrystals Embedded in SiO2 Film",
+            "summary": "Proposed a new method of predicting the concentrations of Europium and Terbium ions needed for photoluminescence of white light with the use of MATLAB.",
+            "keywords":[
+                "Photoluminiscence", "MATLAB"
+            ]
+        },
+        {
+            "title": "NUS Fintech Month 2022 Blockchain Hackathon",
+            "summary": "Proposed the creation of a decentralized NFT marketplace that provides the gateway to create universal NFTs that can exist across multiple-chains.",
+            "keywords":[
+                "Decentralized NFT MarketPlace", "Multiple Chains"
+
+            ]  
+        }
+
+    ]
+}

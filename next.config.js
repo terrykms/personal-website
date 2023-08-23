@@ -1,6 +1,16 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {
-  reactStrictMode: true,
-}
+const { PHASE_DEVELOPMENT_SERVER } = require("next/constants");
 
-module.exports = nextConfig
+/** @type {import('next').NextConfig} */
+const nextConfig = (module.exports = (phase) => {
+  const database =
+    phase === PHASE_DEVELOPMENT_SERVER ? "contact-form-dev" : "contact-form";
+  return {
+    reactStrictMode: true,
+    env: {
+      mongodb_username: "admin",
+      mongodb_password: "passwordasdfasdfasd",
+      mongodb_clustername: "cluster0",
+      mongodb_database: database,
+    },
+  };
+});

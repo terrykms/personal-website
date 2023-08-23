@@ -1,0 +1,26 @@
+.notification {
+    background-color: #e6f7ff;
+    border: 1px solid #40a9ff;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    padding: 0 0 20px 0;
+    border-radius: 5px;
+    margin: 0 auto 20px;   
+
+    &.success {
+        background-color: #b7eb8f;
+        border: 1px solid #52c41a;
+    }
+
+    &.error {
+        background-color: #ffa39e;
+        border: 1px solid #f5222d;
+    }
+}
+
+@media (min-width: 768px) {
+    .notification {
+        width: 50%;
+    }
+}
