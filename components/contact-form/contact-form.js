@@ -79,7 +79,14 @@ const ContactForm = () => {
     };
   }
   return (
-    <Fragment>
+    <div className={classes.container}>
+      <div>
+        <h1>How can I help?</h1>
+        <p>
+          Feel free to drop me a message for any queries, opportunities, or even
+          a simple coffee chat!
+        </p>
+      </div>
       <form className={classes.form} onSubmit={sendMessageHandler}>
         <div className={classes.controls}>
           <div className={classes.control}>
@@ -115,7 +122,7 @@ const ContactForm = () => {
           message={notification.message}
         />
       )}
-    </Fragment>
+    </div>
   );
 };
 
