@@ -2,10 +2,14 @@
 title: Welcome to My Blog
 date: '2023-08-23'
 excerpt: In this short post, I will briefly introduce the various types of content I intend to share!
+image: 'cover.jpg'
+category: 'introduction'
 isFeatured: true
 ---
 
 Welcome to my website / blog! In this post, I will introduce the various kinds of content I will be sharing as I start out my blogging journey. 
+
+![picture of Minseo](cover.jpg)
 
 ## Where I am currently now in life
 Before delving into the topic further, I will briefly share my background. I have recently finished my thid year as a chemical engineering undergraduate student in Nanyang Technological University (NTU), ending my most recent semester as a data analytics intern at Air Liquide Singapore. 

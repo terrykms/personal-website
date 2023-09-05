@@ -2,6 +2,7 @@ import { Fragment } from "react";
 
 import { getPostData, getPostsFiles } from "@/utils/utils";
 import Head from "next/head";
+import BlogContent from "@/components/blog-content/blog-content";
 
 const BlogPost = (props) => {
   const { postData } = props;
@@ -12,8 +13,7 @@ const BlogPost = (props) => {
         <title>{postData.title}</title>
         <meta name="description" content={postData.excerpt} />
       </Head>
-      <h1>{postData.title}</h1>
-      <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
+      <BlogContent post={postData} key={postData.postId} />
     </Fragment>
   );
 };

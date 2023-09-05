@@ -1,7 +1,5 @@
 import fs from "fs";
 import path from "path";
-import { remark } from "remark";
-import html from "remark-html";
 import matter from "gray-matter";
 
 const jsonDirectory = path.join(process.cwd(), "data");
@@ -22,18 +20,12 @@ export const getPostsFiles = () => {
 export const getPostData = async (postId) => {
   const fullPath = path.join(postsDirectory, `${postId}.md`);
   const fileContents = fs.readFileSync(fullPath, "utf8");
-  const matterResult = matter(fileContents);
-
-  const processedContent = await remark()
-    .use(html)
-    .process(matterResult.content);
-
-  const contentHtml = processedContent.toString();
+  const { data, content } = matter(fileContents);
 
   return {
     postId,
-    contentHtml,
-    ...matterResult.data,
+    content,
+    ...data,
   };
 };
 
