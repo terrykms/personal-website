@@ -36,4 +36,4 @@ next-env.d.ts
 
 */images
 
-next.config.js
+*.config.js

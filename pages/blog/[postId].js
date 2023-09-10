@@ -3,6 +3,8 @@ import { Fragment } from "react";
 import { getPostData, getPostsFiles } from "@/utils/utils";
 import Head from "next/head";
 import BlogContent from "@/components/blog-content/blog-content";
+import BlogCommentForm from "@/components/blog-comment-form/blog-comment-form";
+import BlogComments from "@/components/blog-comments/blog-comments";
 
 const BlogPost = (props) => {
   const { postData } = props;
@@ -14,6 +16,8 @@ const BlogPost = (props) => {
         <meta name="description" content={postData.excerpt} />
       </Head>
       <BlogContent post={postData} key={postData.postId} />
+      <BlogComments />
+      <BlogCommentForm />
     </Fragment>
   );
 };

@@ -1,14 +1,16 @@
-import { Fragment, useRef, useState, useEffect } from "react";
+import { useRef, useState, useEffect } from "react";
+import { useRouter } from "next/router";
 
-import classes from "./contact-form.module.scss";
-import Notification from "../notification/notification";
 import FormInput from "../form-input/form-input";
 import FormButton from "../form-button/form-button";
+import Notification from "../notification/notification";
 
-const sendContactData = async (contactDetails) => {
-  const response = await fetch("/api/contact", {
+import classes from "./blog-comment-form.module.scss";
+
+const sendCommentsData = async (commentDetails) => {
+  const response = await fetch(`/api/blog/comment/${commentDetails.postId}`, {
     method: "POST",
-    body: JSON.stringify(contactDetails),
+    body: JSON.stringify(commentDetails),
     headers: {
       "Content-Type": "application/json",
     },
@@ -21,15 +23,46 @@ const sendContactData = async (contactDetails) => {
   }
 };
 
-const ContactForm = () => {
-  const emailInput = useRef();
+const BlogCommentForm = () => {
   const nameInput = useRef();
-  const subjectInput = useRef();
-  const messageInput = useRef();
+  const emailInput = useRef();
+  const commentInput = useRef();
 
   const [requestStatus, setRequestStatus] = useState();
   const [requestError, setRequestError] = useState();
   const [buttonDisabled, setButtonDisabled] = useState(false);
+
+  const router = useRouter();
+  const { postId } = router.query;
+
+  const sendCommentHandler = async (event) => {
+    event.preventDefault();
+    setRequestStatus("pending");
+    setButtonDisabled(true);
+    const now = new Date();
+    const currentTime = now.getTime();
+    const timezoneOffset = now.getTimezoneOffset();
+
+    try {
+      await sendCommentsData({
+        timestamp: currentTime,
+        timezoneOffset,
+        email: emailInput.current.value,
+        name: nameInput.current.value,
+        comment: commentInput.current.value,
+        postId,
+      });
+      setRequestStatus("success");
+    } catch (error) {
+      // error posting message
+      setRequestError(error.message);
+      setRequestStatus("error");
+    }
+    setButtonDisabled(false);
+    nameInput.current.value = "";
+    emailInput.current.value = "";
+    commentInput.current.value = "";
+  };
 
   useEffect(() => {
     if (requestStatus === "success" || requestStatus === "error") {
@@ -41,71 +74,36 @@ const ContactForm = () => {
     }
   }, [requestStatus]);
 
-  const sendMessageHandler = async (event) => {
-    event.preventDefault();
-    setRequestStatus("pending");
-    setButtonDisabled(true);
-
-    try {
-      await sendContactData({
-        email: emailInput.current.value,
-        name: nameInput.current.value,
-        subject: subjectInput.current.value,
-        message: messageInput.current.value,
-      });
-      setRequestStatus("success");
-    } catch (error) {
-      // error posting message
-      setRequestError(error.message);
-      setRequestStatus("error");
-    }
-    setButtonDisabled(false);
-
-    emailInput.current.value = "";
-    nameInput.current.value = "";
-    subjectInput.current.value = "";
-    messageInput.current.value = "";
-  };
-
   let notification;
 
   if (requestStatus === "pending") {
     notification = {
-      title: "Sending...",
+      title: "Publishing...",
       status: requestStatus,
-      message: "Message sending...",
+      message: "Sending Comments...",
     };
   } else if (requestStatus === "success") {
     notification = {
       title: "Success!",
       status: requestStatus,
-      message: "Message sent successfully!",
+      message: "Comment published successfully!",
     };
   } else if (requestStatus === "error") {
     notification = {
       title: "Error!",
       status: requestStatus,
-      message: "Message failed to send.",
+      message: "Comment failed to publish.",
     };
   }
+
   return (
     <div className={classes.container}>
-      <div>
-        <h1>How can I help?</h1>
-        <p>
-          Feel free to drop me a message for any queries, opportunities, or even
-          a simple coffee chat!
-        </p>
+      <div className={classes.header}>
+        <h3>Leave a comment</h3>
+        <span>Your email address will not be published.</span>
       </div>
-      <form className={classes.form} onSubmit={sendMessageHandler}>
+      <form className={classes.form} onSubmit={sendCommentHandler}>
         <div className={classes.controls}>
-          <FormInput
-            id="email"
-            label="Your Email"
-            type="email"
-            isRequired={true}
-            innerRef={emailInput}
-          />
           <FormInput
             id="name"
             label="Your Name"
@@ -113,23 +111,23 @@ const ContactForm = () => {
             isRequired={true}
             innerRef={nameInput}
           />
+          <FormInput
+            id="email"
+            label="Your Email"
+            type="email"
+            isRequired={true}
+            innerRef={emailInput}
+          />
         </div>
         <FormInput
-          id="subject"
-          label="Subject"
-          type="text"
+          id="comment"
+          label="Your Comment"
           isRequired={true}
-          innerRef={subjectInput}
-        />
-        <FormInput
-          id="message"
-          label="Your Message"
-          isRequired={true}
-          innerRef={messageInput}
+          innerRef={commentInput}
           rows="5"
         />
         <div className={classes.actions}>
-          <FormButton label="Send Message" buttonDisabled={buttonDisabled} />
+          <FormButton label="Post Comment" buttonDisabled={buttonDisabled} />
         </div>
       </form>
       {notification && (
@@ -143,4 +141,4 @@ const ContactForm = () => {
   );
 };
 
-export default ContactForm;
+export default BlogCommentForm;

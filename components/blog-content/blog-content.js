@@ -37,6 +37,7 @@ const BlogContent = (props) => {
       <h1 className={classes.title}>{post.title}</h1>
       <span className={classes.date}>{formattedDate}</span>
       <ReactMarkdown components={customRenderers}>{post.content}</ReactMarkdown>
+      <span className={classes.end}></span>
     </article>
   );
 };
