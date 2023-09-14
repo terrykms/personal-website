@@ -1,6 +1,8 @@
 import Head from "next/head";
-import Layout from "@/components/layout/layout";
+import { Analytics } from "@vercel/analytics/react";
 import { Open_Sans, Oswald } from "next/font/google";
+
+import Layout from "@/components/layout/layout";
 
 import "@/styles/globals.scss";
 
@@ -28,6 +30,7 @@ export default function App({ Component, pageProps }) {
         }
       `}</style>
       <Component {...pageProps} />
+      <Analytics />
     </Layout>
   );
 }
