@@ -1,0 +1,21 @@
+@use '../../../styles/variables' as v;
+
+.hamburger {
+    display: inline-block;
+    right: 0;
+
+    span {
+        display: block;
+        width: 30px;
+        height: 3px;
+        background-color: v.$light-color;
+        margin: 5px 0;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+
+    .hamburger {
+        display: none;
+    }
+}
