@@ -28,6 +28,14 @@
                 "Decentralized NFT MarketPlace", "Multiple Chains"
 
             ]  
+        },
+        {
+            "title": "Payroll Automation with Telegram Bot",
+            "summary": "Created a simple telegram bot as a personal project to keep track of the payroll.",
+            "keywords":[
+                "Python", "Telegram Bot", "Amazon EC2", "MySQL"
+
+            ]  
         }
 
     ]

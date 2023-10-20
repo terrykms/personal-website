@@ -13,21 +13,26 @@ const BlogBox = (props) => {
   const imagePath = `/images/blogs/${post.postId}/${post.image}`;
 
   return (
-    <Link className={classes.post} href={`/blog/${post.postId}`}>
-      <div className={classes.image}>
+    <div className={classes.post}>
+      <Link className={classes.image} href={`/blog/${post.postId}`}>
         <Image
           src={imagePath}
           alt={`Cover picture to the blog "${post.title}".`}
           width={600}
           height={300}
         />
-      </div>
+      </Link>
       <div className={classes.description}>
         <span>{formattedDate}</span>
         <h2>{post.title}</h2>
         <p className={classes.excerpt}>{post.excerpt}</p>
+        {post.imageCreditSource && (
+          <div className={classes.credit}>
+            Image by <a href={post.imageCreditLink}>{post.imageCreditSource}</a>
+          </div>
+        )}
       </div>
-    </Link>
+    </div>
   );
 };
 

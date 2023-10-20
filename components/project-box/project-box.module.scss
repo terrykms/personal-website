@@ -15,9 +15,16 @@
 
     .keywords {
         display: flex;
-        column-gap: 10px;
+        column-gap: 5px;
         font-size: v.$size-3;
         font-style: italic;
+
+        .keyword {
+            text-align: center;
+            background-color: v.$vlight-color;
+            padding: 5px;
+            border-radius: 5px;
+        }
     }
 
 }
