@@ -1,7 +1,7 @@
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import { getMediumPosts } from "@/utils/utils";
-import BlogsContainer from "@/components/blogs-container/blogs-container";
+import BlogsContainer from "@/components/blogs/blogs-container/blogs-container";
 
 const BlogsPage = (props) => {
   const { status, feed, items, categories } = props;
@@ -20,7 +20,7 @@ const BlogsPage = (props) => {
   }, [searchCategory]);
   return (
     <div>
-      <h1>Articles</h1>
+      <h1>Latest Articles</h1>
       {status === "ok" ? (
         <BlogsContainer
           posts={filteredArticles}
@@ -62,10 +62,11 @@ export const getStaticProps = async () => {
   return {
     props: {
       status,
-      feed: feed,
-      items: items,
+      feed,
+      items,
       categories: categoriesDict,
     },
+    revalidate: 3600,
   };
 };
 

@@ -2,7 +2,7 @@ import { Fragment } from "react";
 
 import { getMediumPosts, getSingleMediumPost } from "@/utils/utils";
 import Head from "next/head";
-import BlogContent from "@/components/blog-content/blog-content";
+import BlogContent from "@/components/blogs/blog-content/blog-content";
 // import BlogCommentForm from "@/components/blog-comment-form/blog-comment-form";
 // import BlogComments from "@/components/blog-comments/blog-comments";
 
@@ -29,6 +29,7 @@ export const getStaticProps = async (context) => {
     props: {
       postData,
     },
+    revalidate: 3600,
   };
 };
 

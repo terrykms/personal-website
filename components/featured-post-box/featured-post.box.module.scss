@@ -1,0 +1,47 @@
+@use '../../styles/variables' as v;
+
+.post {
+    .image{
+        display: block;
+        max-height: 300px;
+        overflow: hidden;
+        border-radius: 10px;
+        img {
+            object-fit: cover;
+            object-position: middle;
+            width: 100%;
+            height: 100%;
+          }
+    }
+    a {
+        font-style: normal;
+        h3 {
+            margin: 0 0 5px 0;
+        }
+    }
+}
+
+
+
+
+
+@media (min-width: 768px) {
+    .image {
+        width: 300px;
+    }
+    .post {
+        display: grid;
+        grid-template-columns: auto 1fr;
+
+        .description {
+            margin: 0 30px;
+
+            a {
+
+                h3:hover {
+                    color: v.$light-blue;
+                }
+            }
+        }
+    }
+}
