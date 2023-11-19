@@ -5,10 +5,7 @@ const Footer = () => {
   return (
     <footer className={classes.footer}>
       <div className={classes.logos}>
-        <a
-          href="https://www.linkedin.com/in/minseo-kim-60a272202/"
-          target="_blank"
-        >
+        <a href="https://www.linkedin.com/in/minseokim-ms/" target="_blank">
           <Image
             src={"/icons/linkedin.svg"}
             alt="LinkedIn Logo"
@@ -19,6 +16,14 @@ const Footer = () => {
         <a href="https://github.com/terrykms" target="_blank">
           <Image
             src={"/icons/github.svg"}
+            alt="Github Logo"
+            width={40}
+            height={40}
+          />
+        </a>
+        <a href="https://medium.com/@minseo_kim" target="_blank">
+          <Image
+            src={"/icons/medium.svg"}
             alt="Github Logo"
             width={40}
             height={40}
