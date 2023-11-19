@@ -96,6 +96,15 @@ const ContactForm = () => {
           Feel free to drop me a message for any queries, opportunities, or even
           a simple coffee chat!
         </p>
+        <p>
+          Alternatively, you can drop me an email at{" "}
+          <a href="mailto:minseokim.sg@gmail.com">minseokim.sg@gmail.com</a>, or
+          drop me a DM on{" "}
+          <a href="https://www.linkedin.com/in/minseokim-ms/" target="_blank">
+            LinkedIn
+          </a>
+          .
+        </p>
       </div>
       <form className={classes.form} onSubmit={sendMessageHandler}>
         <div className={classes.controls}>

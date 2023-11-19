@@ -12,6 +12,7 @@
     "@vercel/analytics": "^1.0.2",
     "fs": "^0.0.1-security",
     "gray-matter": "^4.0.3",
+    "isomorphic-dompurify": "^1.9.0",
     "mongodb": "^5.8.0",
     "next": "13.4.19",
     "path": "^0.12.7",

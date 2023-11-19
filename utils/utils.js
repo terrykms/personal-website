@@ -46,5 +46,15 @@ export const getMediumPosts = async () => {
   const rssToJsonApiCall =
     "https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fmedium.com%2Ffeed%2F%40minseo_kim";
   const response = await fetch(rssToJsonApiCall);
-  return response.json();
+  const data = response.json();
+  return data;
+};
+
+export const getSingleMediumPost = async (postId) => {
+  const { items } = await getMediumPosts();
+  for (let i = 0; i < items.length; i++) {
+    const currPostId = items[i].title.toLowerCase().split(" ").join("-");
+    if (postId !== currPostId) continue;
+    return items[i];
+  }
 };

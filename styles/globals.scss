@@ -32,7 +32,8 @@ h2 {
 }
 
 a {
-  text-decoration: none;
+  text-decoration: underline;
+  font-style: italic;
 
   &:hover {
     color: v.$light-blue;

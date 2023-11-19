@@ -1,10 +1,10 @@
 import { Fragment } from "react";
 
-import { getPostData, getPostsFiles } from "@/utils/utils";
+import { getMediumPosts, getSingleMediumPost } from "@/utils/utils";
 import Head from "next/head";
 import BlogContent from "@/components/blog-content/blog-content";
-import BlogCommentForm from "@/components/blog-comment-form/blog-comment-form";
-import BlogComments from "@/components/blog-comments/blog-comments";
+// import BlogCommentForm from "@/components/blog-comment-form/blog-comment-form";
+// import BlogComments from "@/components/blog-comments/blog-comments";
 
 const BlogPost = (props) => {
   const { postData } = props;
@@ -13,18 +13,17 @@ const BlogPost = (props) => {
     <Fragment>
       <Head>
         <title>{postData.title}</title>
-        <meta name="description" content={postData.excerpt} />
       </Head>
       <BlogContent post={postData} key={postData.postId} />
-      <BlogComments />
-      <BlogCommentForm />
+      {/* <BlogComments /> */}
+      {/* <BlogCommentForm /> */}
     </Fragment>
   );
 };
 
 export const getStaticProps = async (context) => {
   const { params } = context;
-  const postData = await getPostData(params.postId);
+  const postData = await getSingleMediumPost(params.postId);
 
   return {
     props: {
@@ -33,11 +32,10 @@ export const getStaticProps = async (context) => {
   };
 };
 
-export const getStaticPaths = () => {
-  const postFilenames = getPostsFiles();
-
-  const postIds = postFilenames.map((filename) =>
-    filename.replace(/\.md$/, "")
+export const getStaticPaths = async () => {
+  const { items } = await getMediumPosts();
+  const postIds = items.map((item) =>
+    item.title.toLowerCase().split(" ").join("-")
   );
 
   return {

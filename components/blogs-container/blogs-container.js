@@ -2,14 +2,12 @@ import Link from "next/link";
 import BlogBox from "../blog-box/blog-box";
 import classes from "./blogs-container.module.scss";
 
-const BlogsContainer = (props) => {
-  const { posts, categories } = props;
-
+const BlogsContainer = ({ posts, feed, categories }) => {
   return (
     <div className={classes.container}>
       <div className={classes.posts}>
         {posts.map((post) => {
-          return <BlogBox post={post} key={post.postId} />;
+          return <BlogBox post={post} key={post.guid} />;
         })}
       </div>
       <div className={classes.search}>
