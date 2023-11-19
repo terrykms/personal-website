@@ -20,7 +20,7 @@ const BlogsContainer = (props) => {
               <li key={index}>
                 <Link
                   href={{
-                    pathname: "/blog",
+                    pathname: "/articles",
                     query: { category: key },
                   }}
                 >

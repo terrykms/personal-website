@@ -41,3 +41,10 @@ export const getAllPostData = async () => {
 
   return sortedPosts;
 };
+
+export const getMediumPosts = async () => {
+  const rssToJsonApiCall =
+    "https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fmedium.com%2Ffeed%2F%40minseo_kim";
+  const response = await fetch(rssToJsonApiCall);
+  return response.json();
+};

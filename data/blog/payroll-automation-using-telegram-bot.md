@@ -26,7 +26,7 @@ This project aims to simplify payroll accounting and streamline the calculation 
 
 ## Logic
 
-The project's functionality is organized around a set of commands initiated with a `/start` command:
+The project's functionality is organized around a set of commands initiated with a `/start\` command:
 
 1. `/add`
 2. `/edit`

@@ -20,7 +20,7 @@ const BlogsPage = (props) => {
   }, [searchCategory]);
   return (
     <div>
-      <h1>Blogs</h1>
+      <h1>Articles</h1>
       <BlogsContainer posts={filteredPosts} categories={categories} />
     </div>
   );

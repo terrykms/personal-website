@@ -1,5 +1,7 @@
 import Image from "next/image";
 import ReactMarkdown from "react-markdown";
+import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
+import atomDark from "react-syntax-highlighter/dist/cjs/styles/prism/atom-dark";
 import classes from "./blog-content.module.scss";
 
 const BlogContent = (props) => {
@@ -29,6 +31,10 @@ const BlogContent = (props) => {
         );
       }
       return <p>{paragraph.children}</p>;
+    },
+    code(code) {
+      const { className, children } = code;
+      console.log(className);
     },
   };
 

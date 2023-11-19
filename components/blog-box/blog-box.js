@@ -14,10 +14,10 @@ const BlogBox = (props) => {
 
   return (
     <div className={classes.post}>
-      <Link className={classes.image} href={`/blog/${post.postId}`}>
+      <Link className={classes.image} href={`/articles/${post.postId}`}>
         <Image
           src={imagePath}
-          alt={`Cover picture to the blog "${post.title}".`}
+          alt={`Cover picture to the article "${post.title}".`}
           width={600}
           height={300}
         />
