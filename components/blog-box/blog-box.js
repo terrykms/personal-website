@@ -9,6 +9,10 @@ const BlogBox = ({ post }) => {
     month: "long",
     year: "numeric",
   });
+  const loaderProp = ({ src }) => {
+    return src;
+  };
+
   const imagePath = post.thumbnail;
   const postId = post.title.toLowerCase().split(" ").join("-");
 
@@ -20,6 +24,7 @@ const BlogBox = ({ post }) => {
           alt={`Cover picture to the article "${post.title}".`}
           width={600}
           height={300}
+          loader={loaderProp}
         />
       </Link>
       <div className={classes.description}>
