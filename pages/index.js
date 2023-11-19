@@ -1,12 +1,12 @@
 import { Fragment } from "react";
 import Head from "next/head";
 
+import { getMediumPosts } from "@/utils/utils";
+
 import Introduction from "@/components/introduction/introduction";
 import FeaturedPosts from "@/components/featured-posts/featured-posts";
 
-const posts = [];
-
-const HomePage = () => {
+const HomePage = ({ status, items }) => {
   return (
     <Fragment>
       <Head>
@@ -17,9 +17,29 @@ const HomePage = () => {
         />
       </Head>
       <Introduction />
-      <FeaturedPosts posts={posts} />
+      <FeaturedPosts posts={items} />
     </Fragment>
   );
+};
+
+export const getStaticProps = async () => {
+  const { status, items } = await getMediumPosts();
+  const latestThreeItems = items.slice(0, 3);
+  if (status === "error") {
+    return {
+      props: {
+        status,
+        url: "https://medium.com/@minseo_kim",
+      },
+    };
+  }
+  return {
+    props: {
+      status,
+      items: latestThreeItems,
+    },
+    revalidate: 3600,
+  };
 };
 
 export default HomePage;

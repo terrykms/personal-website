@@ -28,8 +28,8 @@ const BlogBox = ({ post }) => {
         />
       </Link>
       <div className={classes.description}>
-        <span>{formattedDate}</span>
         <h2>{post.title}</h2>
+        <div className={classes.date}>{formattedDate}</div>
       </div>
     </div>
   );
