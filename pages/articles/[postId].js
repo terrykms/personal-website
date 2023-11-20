@@ -15,8 +15,6 @@ const BlogPost = (props) => {
         <title>{postData.title}</title>
       </Head>
       <BlogContent post={postData} key={postData.postId} />
-      {/* <BlogComments /> */}
-      {/* <BlogCommentForm /> */}
     </Fragment>
   );
 };

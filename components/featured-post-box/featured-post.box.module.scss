@@ -16,7 +16,10 @@
     a {
         font-style: normal;
         h3 {
-            margin: 0 0 5px 0;
+            margin: 10px 0;
+            &:hover {
+                color: v.$light-blue;
+            }
         }
     }
 }
@@ -36,11 +39,9 @@
         .description {
             margin: 0 30px;
 
-            a {
+            h3 {
+                margin: 0 0 10px 0;
 
-                h3:hover {
-                    color: v.$light-blue;
-                }
             }
         }
     }
