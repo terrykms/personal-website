@@ -1,4 +1,4 @@
-import { Fragment, useRef, useState, useEffect } from "react";
+import { useRef, useState, useEffect } from "react";
 
 import classes from "./contact-form.module.scss";
 import Notification from "../notification/notification";

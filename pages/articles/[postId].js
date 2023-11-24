@@ -33,12 +33,9 @@ export const getStaticProps = async (context) => {
 
 export const getStaticPaths = async () => {
   const { items } = await getMediumPosts();
-  const postIds = items.map((item) =>
-    item.title.toLowerCase().split(" ").join("-")
-  );
 
   return {
-    paths: postIds.map((postId) => ({ params: { postId: postId } })),
+    paths: items.map((item) => ({ params: { postId: item.postId } })),
     fallback: false,
   };
 };

@@ -7,13 +7,12 @@ const FeaturedPosts = ({ posts }) => {
   if (posts.length === 0) {
     return;
   }
-
   return (
     <div className={classes.container}>
       <h2>My Latest Articles</h2>
       <div className={classes.posts}>
         {posts.map((post) => (
-          <FeaturedPostBox post={post} />
+          <FeaturedPostBox post={post} key={post.postId} />
         ))}
       </div>
       <div className={classes.button}>

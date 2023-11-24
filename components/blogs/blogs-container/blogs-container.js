@@ -7,7 +7,7 @@ const BlogsContainer = ({ posts, feed, categories }) => {
     <div className={classes.container}>
       <div className={classes.posts}>
         {posts.map((post) => {
-          return <BlogBox post={post} key={post.guid} />;
+          return <BlogBox post={post} key={post.postId} />;
         })}
       </div>
       <div className={classes.search}>
@@ -21,6 +21,7 @@ const BlogsContainer = ({ posts, feed, categories }) => {
                     pathname: "/articles",
                     query: { category: key },
                   }}
+                  key={key}
                 >
                   {key} [{categories[key]}]
                 </Link>

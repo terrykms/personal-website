@@ -3,7 +3,7 @@ import Link from "next/link";
 import classes from "./featured-post.box.module.scss";
 
 const FeaturedPostBox = ({ post }) => {
-  const { title, description, pubDate, thumbnail } = post;
+  const { title, pubDate, postId } = post;
   const formattedDate = new Date(pubDate).toLocaleDateString("en-UK", {
     day: "numeric",
     month: "long",
@@ -15,7 +15,6 @@ const FeaturedPostBox = ({ post }) => {
   };
 
   const imagePath = post.thumbnail;
-  const postId = post.title.toLowerCase().split(" ").join("-");
   return (
     <div className={classes.post}>
       <div className={classes.image}>
