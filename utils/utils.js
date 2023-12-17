@@ -53,7 +53,13 @@ export const getMediumPosts = async () => {
       .split(" ")
       .join("-")
       .replace(":", "");
-    return { ...item, postId };
+    const substringKey = "src=";
+    const startIdx =
+      item.description.indexOf(substringKey) + substringKey.length + 1;
+    const endIdx = item.description.indexOf('"', startIdx);
+    const thumbnail = item.description.substring(startIdx, endIdx);
+
+    return { ...item, postId, thumbnail };
   });
   return { status, feed, items: modifiedItems };
 };
