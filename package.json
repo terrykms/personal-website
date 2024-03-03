@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@vercel/analytics": "^1.0.2",
+    "@vercel/speed-insights": "^1.0.10",
     "fs": "^0.0.1-security",
     "gray-matter": "^4.0.3",
     "isomorphic-dompurify": "^1.9.0",

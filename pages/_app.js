@@ -1,5 +1,6 @@
 import Head from "next/head";
 import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Open_Sans, Oswald } from "next/font/google";
 
 import Layout from "@/components/layout/layout";
@@ -49,6 +50,7 @@ export default function App({ Component, pageProps }) {
       `}</style>
       <Component {...pageProps} />
       <Analytics />
+      <SpeedInsights />
     </Layout>
   );
 }
