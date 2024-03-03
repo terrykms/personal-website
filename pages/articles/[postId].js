@@ -35,7 +35,7 @@ export const getStaticPaths = async () => {
   const { items } = await getMediumPosts();
   return {
     paths: items.map((item) => ({ params: { postId: item.postId } })),
-    fallback: false,
+    fallback: "blocking",
   };
 };
 
