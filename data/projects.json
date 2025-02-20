@@ -36,6 +36,14 @@
                 "Python", "Telegram Bot", "Amazon EC2", "MySQL"
 
             ]  
+        },
+        {
+            "title": "EaseCal",
+            "summary": "Created a prototype for restaurants and cafes to streamline shift-scheduling between employees and managers.",
+            "keywords":[
+                "Next.js", "Supabase", "REST API"
+
+            ]  
         }
 
     ]

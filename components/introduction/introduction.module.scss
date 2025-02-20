@@ -24,8 +24,13 @@
         width: 80%;
         text-align: center;
 
+        p {
+            text-align: left;
+            font-size: large
+        }
+
         .highlight {
-            text-decoration: underline;
+            // text-decoration: underline;
             font-weight: bold;
         }
     }

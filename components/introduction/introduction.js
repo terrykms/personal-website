@@ -1,5 +1,6 @@
 import Image from "next/image";
 import classes from "./introduction.module.scss";
+import Link from "next/link";
 
 const Introduction = () => {
   return (
@@ -14,11 +15,24 @@ const Introduction = () => {
       </div>
       <div className={classes.content}>
         <h1>Minseo Kim</h1>
+        <p>Welcome to my page!</p>
         <p>
-          I'm an entrepreneur in the making, driven by the belief that{" "}
-          <span className={classes.highlight}>software solutions</span> hold the
-          key to reshaping how we work, communicate, and thrive as a society.
+          I am an undergraduate in{" "}
+          <span className={classes.highlight}>
+            Nanyang Technological University
+          </span>
+          , currently taking a 2-year gap to complete my{" "}
+          <span className={classes.highlight}>National Service (NS)</span> in
+          Singapore.
         </p>
+        <p>
+          While my degree is in Chemical Engineering, I managed to deepen my
+          knowledge in programming through{" "}
+          <Link href="/projects">personal projects</Link> and consolidating my
+          learnings through writing <Link href="/articles">articles</Link>{" "}
+          during my time in NS.
+        </p>
+        <p>I will be back in August 2025 to complete my final year at NTU!</p>
       </div>
     </div>
   );
