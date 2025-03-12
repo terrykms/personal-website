@@ -4,25 +4,13 @@ import Image from "next/image";
 import classes from "./blog-box.module.scss";
 
 const BlogBox = ({ post }) => {
-  const {
-    title,
-    pubDate,
-    guid,
-    author,
-    thumbnail,
-    description,
-    content,
-    postId,
-  } = post;
+  const { title, pubDate, thumbnail, postId } = post;
 
   const formattedDate = new Date(pubDate).toLocaleDateString("en-UK", {
     day: "numeric",
     month: "long",
     year: "numeric",
   });
-  const loaderProp = ({ src }) => {
-    return src;
-  };
 
   const imagePath = thumbnail;
 
@@ -34,7 +22,6 @@ const BlogBox = ({ post }) => {
           alt={`Cover picture to the article "${title}".`}
           width={600}
           height={300}
-          loader={loaderProp}
         />
       </Link>
       <div className={classes.description}>

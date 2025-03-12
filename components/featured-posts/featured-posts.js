@@ -1,9 +1,12 @@
 import Link from "next/link";
 import { Fragment } from "react";
+import { getMediumPosts } from "@/utils/utils";
 import FeaturedPostBox from "../featured-post-box/featured-post-box";
 import classes from "./featured-posts.module.scss";
 
-const FeaturedPosts = ({ posts }) => {
+const FeaturedPosts = async () => {
+  const { status, items } = await getMediumPosts();
+  const posts = items.slice(0, 3);
   if (posts.length === 0) {
     return;
   }

@@ -1,3 +1,4 @@
+"use client";
 import ReactDOM from "react-dom";
 
 import classes from "./notification.module.scss";

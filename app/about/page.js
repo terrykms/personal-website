@@ -1,13 +1,15 @@
 import { Fragment } from "react";
-import { getJSONData } from "@/utils/utils";
+import { getJSONData } from "../../_lib/utils";
 
 import AboutMe from "@/components/about-me/about-me";
 import Experiences from "@/components/experiences/experiences";
 import Education from "@/components/education/education";
 import Head from "next/head";
 
-const AboutPage = (props) => {
-  const { experienceData, educationData } = props;
+const AboutPage = () => {
+  const experienceData = getJSONData("experiences.json");
+  const educationData = getJSONData("education.json");
+
   return (
     <Fragment>
       <Head>
@@ -22,17 +24,6 @@ const AboutPage = (props) => {
       <Education data={educationData.education} />
     </Fragment>
   );
-};
-
-export const getStaticProps = () => {
-  const experienceData = getJSONData("experiences.json");
-  const educationData = getJSONData("education.json");
-  return {
-    props: {
-      experienceData: experienceData,
-      educationData: educationData,
-    },
-  };
 };
 
 export default AboutPage;

@@ -23,7 +23,7 @@ const FeaturedPostBox = ({ post }) => {
           alt={`Cover picture to the article "${title}".`}
           width={100}
           height={150}
-          loader={loaderProp}
+          // loader={loaderProp}
         />
       </div>
       <div className={classes.description}>
