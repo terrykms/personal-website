@@ -1,0 +1,13 @@
+@use '/styles/variables' as v;
+
+.container {
+    display:grid;
+    gap: 40px
+}
+
+@media (min-width: 768px) {
+    .container {
+        grid-template-columns: 1fr 1fr;
+
+    }
+}

@@ -1,11 +1,11 @@
-@use '../../styles/variables' as v;
+@use '/styles/variables' as v;
 
 .header {
   display: flex;
   width: 100%;
   align-items: center;
   background-color: v.$dark-color;
-  justify-content:end;
+  justify-content:flex-end;
   padding: 20px 50px;
 
   .index {
