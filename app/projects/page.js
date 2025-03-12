@@ -1,4 +1,4 @@
-import ProjectContainer from "@/components/project-container/project-container";
+import ProjectContainer from "@/components/projects/project-container/project-container";
 import { getJSONData } from "../../lib/utils";
 import { Fragment } from "react";
 

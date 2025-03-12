@@ -8,8 +8,8 @@ const ProjectBox = (props) => {
       <h2>{project.title}</h2>
       <div className={classes.summary}>{project.summary}</div>
       <div className={classes.keywords}>
-        {keywordsArray.map((keyword) => (
-          <span className={classes.keyword} key={project.keyword}>
+        {keywordsArray.map((keyword, i) => (
+          <span className={classes.keyword} key={i}>
             {keyword}
           </span>
         ))}

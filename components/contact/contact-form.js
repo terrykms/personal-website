@@ -3,9 +3,9 @@ import { useActionState, useState, useEffect } from "react";
 import { sendMessage } from "@/app/contact/actions";
 
 import classes from "./contact-form.module.scss";
-import Notification from "../notification/notification";
-import FormInput from "../form-input/form-input";
-import FormButton from "../form-button/form-button";
+import Notification from "../ui/notification/notification";
+import FormInput from "../form/form-input/form-input";
+import FormButton from "../form/form-button/form-button";
 
 const initialState = {
   success: undefined,

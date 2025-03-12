@@ -1,4 +1,4 @@
-import ProjectBox from "@/components/project-box/project-box";
+import ProjectBox from "@/components/projects/project-box/project-box";
 
 import classes from "./project-container.module.scss";
 
