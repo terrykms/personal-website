@@ -3,6 +3,7 @@ import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 
 import Layout from "@/components/layout/layout";
+import { oswald, openSans } from "@/lib/fonts";
 
 export const viewport = {
   width: "device-width",
@@ -27,7 +28,7 @@ export const metadata = {
 
 const RootLayout = ({ children }) => {
   return (
-    <html lang="en">
+    <html lang="en" className={`${oswald.variable} ${openSans.variable}`}>
       <body>
         <Layout>
           {children}
