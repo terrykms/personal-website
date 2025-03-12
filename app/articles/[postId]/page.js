@@ -1,6 +1,6 @@
 import { Fragment } from "react";
 
-import { getMediumPosts, getSingleMediumPost } from "@/utils/utils";
+import { getMediumPosts, getSingleMediumPost } from "@/lib/medium";
 import Head from "next/head";
 import BlogContent from "@/components/blogs/blog-content/blog-content";
 

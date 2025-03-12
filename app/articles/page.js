@@ -1,4 +1,4 @@
-import { getMediumPosts } from "@/utils/utils";
+import { getMediumPosts } from "@/lib/medium";
 import BlogsContainer from "@/components/blogs/blogs-container/blogs-container";
 
 const ArticlesPage = async () => {

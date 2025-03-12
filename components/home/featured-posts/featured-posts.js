@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { Fragment } from "react";
-import { getMediumPosts } from "@/utils/utils";
+import { getMediumPosts } from "@/lib/medium";
 import FeaturedPostBox from "../featured-post-box/featured-post-box";
 import classes from "./featured-posts.module.scss";
 
