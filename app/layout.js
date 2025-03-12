@@ -4,11 +4,17 @@ import { SpeedInsights } from "@vercel/speed-insights/next";
 
 import Layout from "@/components/layout/layout";
 
+export const viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 1,
+  userScalable: false,
+};
+
 export const metadata = {
   title: "Minseo's Personal Website",
   description:
     "A personal website showcasing my projects, interests, and professional journey in software engineering and entrepreneurship.",
-  viewport: "width=device-width, initial-scale=1",
   icons: {
     apple: "/favicon/apple-touch-icon.png",
     icon: [
