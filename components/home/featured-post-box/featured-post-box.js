@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 import classes from "./featured-post.box.module.scss";
 
@@ -18,7 +17,7 @@ const FeaturedPostBox = ({ post }) => {
   return (
     <div className={classes.post}>
       <div className={classes.image}>
-        <Image
+        <img
           src={imagePath}
           alt={`Cover picture to the article "${title}".`}
           width={100}
