@@ -4,14 +4,14 @@ import ReactDOM from "react-dom";
 import classes from "./notification.module.scss";
 
 const Notification = (props) => {
-  const { title, message, status } = props;
+  const { title, message, success } = props;
 
   let statusClasses = "";
-  switch (status) {
-    case "success":
+  switch (success) {
+    case 1:
       statusClasses = classes.success;
       break;
-    case "error":
+    case 0:
       statusClasses = classes.error;
       break;
   }

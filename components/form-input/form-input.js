@@ -6,9 +6,21 @@ const FormInput = (props) => {
     <div className={classes.control}>
       <label htmlFor={id}>{label}</label>
       {rows ? (
-        <textarea id={id} rows={rows} required={isRequired} ref={innerRef} />
+        <textarea
+          id={id}
+          name={id}
+          rows={rows}
+          required={isRequired}
+          ref={innerRef}
+        />
       ) : (
-        <input type={type} id={id} required={isRequired} ref={innerRef} />
+        <input
+          type={type}
+          name={id}
+          id={id}
+          required={isRequired}
+          ref={innerRef}
+        />
       )}
     </div>
   );

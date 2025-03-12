@@ -1,5 +1,5 @@
 import ProjectContainer from "@/components/project-container/project-container";
-import { getJSONData } from "../../_lib/utils";
+import { getJSONData } from "../../lib/utils";
 import { Fragment } from "react";
 
 export const metadata = {

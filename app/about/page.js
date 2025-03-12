@@ -1,5 +1,5 @@
 import { Fragment } from "react";
-import { getJSONData } from "../../_lib/utils";
+import { getJSONData } from "../../lib/utils";
 
 import AboutMe from "@/components/about-me/about-me";
 import Experiences from "@/components/experiences/experiences";

@@ -1,6 +1,6 @@
 "use server";
 
-import connectToDatabase from "@/_lib/database/db";
+import clientPromise from "@/lib/database/mongodb";
 
 export const sendMessage = async (prevState, formData) => {
   const rawFormData = {
@@ -24,7 +24,8 @@ export const sendMessage = async (prevState, formData) => {
   }
 
   try {
-    const { db } = await connectToDatabase();
+    const client = await clientPromise;
+    const db = client.db();
     const result = await db.collection("messages").insertOne(rawFormData);
     rawFormData.id = result.insertedId;
   } catch (error) {

@@ -1,5 +1,5 @@
 "use client";
-import { useActionState } from "react";
+import { useActionState, useState, useEffect } from "react";
 import { sendMessage } from "@/app/contact/actions";
 
 import classes from "./contact-form.module.scss";
@@ -12,9 +12,44 @@ const initialState = {
   message: "",
 };
 const ContactForm = () => {
-  const [state, formAction] = useActionState(sendMessage, initialState);
-  let notification = undefined;
+  const [state, formAction, isPending] = useActionState(
+    sendMessage,
+    initialState
+  );
+  const [notification, setNotification] = useState(null);
 
+  useEffect(() => {
+    if (state?.success === 1 || state?.success === 0) {
+      const timer = setTimeout(() => {
+        setNotification(null);
+      }, 3000);
+      return () => clearTimeout(timer);
+    }
+  }, [state]);
+
+  useEffect(() => {
+    if (isPending) {
+      return setNotification({
+        title: "Sending...",
+        success: null,
+        message: "Message sending...",
+      });
+    }
+    if (state?.success === 1) {
+      return setNotification({
+        title: "Success!",
+        success: state.success,
+        message: state.message,
+      });
+    }
+    if (state?.success === 0) {
+      return setNotification({
+        title: "Error!",
+        success: state.success,
+        message: state.message,
+      });
+    }
+  }, [state, isPending]);
   return (
     <div className={classes.container}>
       <div>
@@ -62,7 +97,7 @@ const ContactForm = () => {
       {notification && (
         <Notification
           title={notification.title}
-          status={notification.status}
+          success={notification.status}
           message={state?.message}
         />
       )}
