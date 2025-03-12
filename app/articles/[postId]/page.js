@@ -8,14 +8,7 @@ const BlogPost = async ({ params }) => {
   const { postId } = await params;
   const postData = await getSingleMediumPost(postId);
 
-  return (
-    <Fragment>
-      <Head>
-        <title>{postData.title}</title>
-      </Head>
-      <BlogContent post={postData} key={postId} />
-    </Fragment>
-  );
+  return <BlogContent post={postData} key={postId} />;
 };
 
 export const generateStaticParams = async () => {
