@@ -9,7 +9,7 @@ const ProjectBox = (props) => {
       <div className={classes.summary}>{project.summary}</div>
       <div className={classes.keywords}>
         {keywordsArray.map((keyword) => (
-          <span className={classes.keyword} key={project.key}>
+          <span className={classes.keyword} key={project.keyword}>
             {keyword}
           </span>
         ))}
