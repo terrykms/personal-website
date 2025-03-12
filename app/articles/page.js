@@ -4,7 +4,6 @@ import BlogsContainer from "@/components/blogs/blogs-container/blogs-container";
 
 const ArticlesPage = async () => {
   const { status, items } = await getMediumPosts();
-
   return (
     <div>
       <h1>Latest Articles</h1>

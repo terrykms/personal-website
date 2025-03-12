@@ -1,8 +1,7 @@
-import { Fragment } from "react";
-
 import { getMediumPosts, getSingleMediumPost } from "@/lib/medium";
-import Head from "next/head";
 import BlogContent from "@/components/blogs/blog-content/blog-content";
+
+export const metadata = {};
 
 const BlogPost = async ({ params }) => {
   const { postId } = await params;
