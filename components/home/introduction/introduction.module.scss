@@ -22,12 +22,10 @@
     }
 
     .content{
-        width: 80%;
         text-align: center;
 
         p {
             text-align: left;
-            font-size: large
         }
 
         .highlight {
@@ -39,9 +37,18 @@
 
 @media (min-width: 768px) {
     .intro {
+
         .image {
             width: 400px;
             height: 400px;
+        }
+
+        .content{
+            width: 80%;
+    
+            p {
+                font-size: large
+            }
         }
     }
 
