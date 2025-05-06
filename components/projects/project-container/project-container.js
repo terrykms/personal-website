@@ -2,8 +2,7 @@ import ProjectBox from "@/components/projects/project-box/project-box";
 
 import classes from "./project-container.module.scss";
 
-const ProjectContainer = (props) => {
-  const { data } = props;
+const ProjectContainer = ({ data }) => {
   return (
     <div className={classes.container}>
       {data.map((project) => (

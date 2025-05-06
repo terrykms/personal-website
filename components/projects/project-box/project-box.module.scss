@@ -1,31 +1,40 @@
-@use '/styles/variables' as v;
-
+@use "/styles/variables" as v;
 
 .project {
-    background-color: v.$light-color;
-    padding: 20px;
-    border-radius: 5px;
-    h2 {
-        font-size: v.$size-5;
-        margin: 0 0 10px 0;
+  background-color: v.$light-color;
+  padding: 20px;
+  border-radius: 5px;
+  h2 {
+    font-size: v.$size-5;
+    margin: 0 0 10px 0;
+  }
+
+  a {
+    color: v.$light-blue;
+    display: block;
+    margin: 0 0 10px 0;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
     }
+  }
 
-    .summary {
-        margin: 0 0 10px 0;
+  .summary {
+    margin: 0 0 10px 0;
+  }
+
+  .keywords {
+    display: flex;
+    column-gap: 10px;
+    font-size: v.$size-3;
+    font-style: italic;
+
+    .keyword {
+      text-align: center;
+      background-color: v.$vlight-color;
+      padding: 5px;
+      border-radius: 10px;
     }
-
-    .keywords {
-        display: flex;
-        column-gap: 10px;
-        font-size: v.$size-3;
-        font-style: italic;
-
-        .keyword {
-            text-align: center;
-            background-color: v.$vlight-color;
-            padding: 5px;
-            border-radius: 10px;
-        }
-    }
-
+  }
 }

@@ -1,50 +1,46 @@
 {
-    "projects": [
-        {
-            "title": "Classifications of Soundscapes with Deep Learning Algorithm",
-            "summary": "Implemented convolutional neural network (CNN) architecture as a predictive model for soundscape affective responses.",
-            "keywords":[
-                "Convolutional Neural Networks", "Audio Analysis"
-            ]
-        },
-        {
-            "title": "Video Summarisation in Surveillance and Security Systems",
-            "summary": "Experimented with existing convolutional neural networks on human activity recognition (HAR) with Tensorflow/Keras.",
-            "keywords":[
-                "Human Activity Recognition", "Convolutional Neural Networks"
-            ]
-        }, 
-        {
-            "title": "Emissions from Rare-Earth (RE) Ions by the Energy Transfer from ZnO Nanocrystals Embedded in SiO2 Film",
-            "summary": "Proposed a new method of predicting the concentrations of Europium and Terbium ions needed for photoluminescence of white light with the use of MATLAB.",
-            "keywords":[
-                "Photoluminiscence", "MATLAB"
-            ]
-        },
-        {
-            "title": "NUS Fintech Month 2022 Blockchain Hackathon",
-            "summary": "Proposed the creation of a decentralized NFT marketplace that provides the gateway to create universal NFTs that can exist across multiple-chains.",
-            "keywords":[
-                "Decentralized NFT MarketPlace", "Multiple Chains"
-
-            ]  
-        },
-        {
-            "title": "Payroll Automation with Telegram Bot",
-            "summary": "Created a simple telegram bot as a personal project to keep track of the payroll.",
-            "keywords":[
-                "Python", "Telegram Bot", "Amazon EC2", "MySQL"
-
-            ]  
-        },
-        {
-            "title": "EaseCal",
-            "summary": "Created a prototype for restaurants and cafes to streamline shift-scheduling between employees and managers.",
-            "keywords":[
-                "Next.js", "Supabase", "REST API"
-
-            ]  
-        }
-
-    ]
+  "projects": [
+    {
+      "title": "Job Application Tracker",
+      "summary": "Created a Job Application Dashboard that allows users to track their job application. Features include a summary dashboard, dynamic table that allows for editing, and detailed view of each application.",
+      "keywords": ["Next.js", "Supabase", "Server Actions", "React Context"],
+      "link": "https://myjobtrackr.vercel.app/"
+    },
+    {
+      "title": "EaseCal",
+      "summary": "Created a prototype for restaurants and cafes to streamline shift-scheduling between employees and managers.",
+      "keywords": ["Next.js", "Supabase", "REST API"],
+      "link": "https://easecal.vercel.app/"
+    },
+    {
+      "title": "Classifications of Soundscapes with Deep Learning Algorithm",
+      "summary": "Implemented convolutional neural network (CNN) architecture as a predictive model for soundscape affective responses.",
+      "keywords": ["Convolutional Neural Networks", "Audio Analysis"]
+    },
+    {
+      "title": "Video Summarisation in Surveillance and Security Systems",
+      "summary": "Experimented with existing convolutional neural networks on human activity recognition (HAR) with Tensorflow/Keras.",
+      "keywords": [
+        "Convolutional Neural Networks",
+        "Human Activity Recognition"
+      ]
+    },
+    {
+      "title": "Emissions from Rare-Earth (RE) Ions by the Energy Transfer from ZnO Nanocrystals Embedded in SiO2 Film",
+      "summary": "Proposed a new method of predicting the concentrations of Europium and Terbium ions needed for photoluminescence of white light with the use of MATLAB.",
+      "keywords": ["Photoluminiscence", "MATLAB"]
+    },
+    {
+      "title": "Payroll Automation with Telegram Bot",
+      "summary": "Created a simple telegram bot as a personal project to keep track of the payroll.",
+      "keywords": ["Python", "Telegram Bot", "Amazon EC2", "MySQL"],
+      "link": "https://medium.com/@minseo_kim/building-a-telegram-bot-for-payroll-tracking-156c16844be7"
+    },
+    {
+      "title": "NUS Fintech Month 2022 Blockchain Hackathon",
+      "summary": "Proposed the creation of a decentralized NFT marketplace that provides the gateway to create universal NFTs that can exist across multiple-chains.",
+      "keywords": ["Decentralized NFT MarketPlace", "Multiple Chains"],
+      "link": "https://youtu.be/osxFvLn8lTA"
+    }
+  ]
 }

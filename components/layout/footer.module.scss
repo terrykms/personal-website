@@ -1,20 +1,24 @@
-@use '/styles/variables' as v;
+@use "/styles/variables" as v;
 
 .footer {
-    height: 5rem;
+  height: 7rem;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 20px 20px 0;
+  background-color: v.$light-color;
+  .logos {
     display: flex;
-    flex-flow: column;
-    align-items: flex-end;
-    padding: 20px 20px 0;
-    .logos {
-        display: flex;
-        
-        gap: 5px;
+    gap: 10px;
+
+    a {
+      display: block;
     }
+  }
 }
 
 @media (min-width: 768px) {
-    .footer{
-        padding: 20px 200px 0;
-    }
+  .footer {
+    padding: 20px 200px 0;
   }
+}

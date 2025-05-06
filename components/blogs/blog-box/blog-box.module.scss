@@ -1,34 +1,31 @@
-@use '/styles/variables' as v;
+@use "/styles/variables" as v;
 
 .post {
-    border: 1px solid black;
-    margin: 0 0  20px 0;
-    padding: 0 0 10px 0;
-    .image{
-        display: block;
-        width: 100%;
-        height: 400px;
-        overflow: hidden;
-        img {
-            object-fit: cover;
-            object-position: middle;
-            width: 100%;
-            height: 100%;
-          }
+  border: 1px solid black;
+  border-radius: 1em;
+  margin: 0 0 20px 0;
+  padding: 0 0 10px 0;
+  .image {
+    display: block;
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+    border-radius: 1em 1em 0 0;
+    img {
+      object-fit: cover;
+      object-position: middle;
+      width: 100%;
+      height: 100%;
     }
+  }
 
-    .description {
-        margin: 10px 15px 0;
-        h2 {
-            margin: 0;
-        }
-        .date {
-            text-align:right;
-
-        }
-    
+  .description {
+    margin: 10px 15px 0;
+    h2 {
+      margin: 0;
     }
-
-
-
+    .date {
+      text-align: right;
+    }
+  }
 }

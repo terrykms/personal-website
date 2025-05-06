@@ -1,9 +1,9 @@
-@use '/styles/variables' as v;
+@use "/styles/variables" as v;
 
 * {
   box-sizing: border-box;
-  font-family: var(--font-open-sans), 'sans-serif';
-  color: v.$dark-color
+  font-family: var(--font-open-sans), "sans-serif";
+  color: v.$dark-color;
 }
 
 body {
@@ -12,26 +12,27 @@ body {
 }
 
 main {
-  margin: 0px 20px;
+  width: 95%;
+  margin: 0 auto;
 }
 
 h1,
 h2,
 h3,
 h4 {
-  font-family: var(--font-oswald), 'sans-serif';
+  font-family: var(--font-oswald), "sans-serif";
 }
 
 h1 {
-  font-size: v.$size-8
+  font-size: v.$size-8;
 }
 
 h2 {
-  font-size: v.$size-6
+  font-size: v.$size-6;
 }
 
 h3 {
-  font-size: v.$size-5
+  font-size: v.$size-5;
 }
 
 h4 {
@@ -65,7 +66,7 @@ section {
 
 @media (min-width: 768px) {
   h1 {
-    font-size: v.$size-16
+    font-size: v.$size-16;
   }
 
   h2 {
@@ -73,19 +74,15 @@ section {
   }
 
   p {
-    font-size: v.$size-5
+    font-size: v.$size-5;
   }
 
   main {
-    margin: 0px 200px;
+    width: 60%;
+    max-width: 968px;
   }
 
   section {
     margin: 0 0 100px 0;
   }
-
-
 }
-
-
-
