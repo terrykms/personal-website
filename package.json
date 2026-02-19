@@ -16,7 +16,7 @@
     "isomorphic-dompurify": "^1.13.0",
     "lucide-react": "^0.507.0",
     "mongodb": "^5.9.2",
-    "next": "^15.2.1",
+    "next": "^15.5.12",
     "path": "^0.12.7",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
