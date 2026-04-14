@@ -13,10 +13,10 @@
     "@vercel/speed-insights": "^1.2.0",
     "fs": "^0.0.1-security",
     "gray-matter": "^4.0.3",
-    "isomorphic-dompurify": "^1.13.0",
+    "isomorphic-dompurify": "^3.8.0",
     "lucide-react": "^0.507.0",
     "mongodb": "^5.9.2",
-    "next": "^15.5.12",
+    "next": "^15.5.15",
     "path": "^0.12.7",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
@@ -24,7 +24,7 @@
     "react-syntax-highlighter": "^15.5.0",
     "remark": "^14.0.3",
     "remark-html": "^15.0.2",
-    "sass": "^1.66.1",
+    "sass": "^1.99.0",
     "sharp": "^0.32.6",
     "swr": "^2.3.3"
   }
