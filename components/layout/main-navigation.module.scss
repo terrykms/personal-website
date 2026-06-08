@@ -1,18 +1,8 @@
 @use "/styles/variables" as v;
 
 .header {
-  display: flex;
-  flex-direction: column;
-  text-align: right;
   width: 100%;
-  align-items: flex-end;
   background-color: v.$dark-color;
-  justify-content: flex-end;
-  padding: 20px 20px;
-
-  .index {
-    display: none;
-  }
 
   a {
     color: v.$light-color;
@@ -25,6 +15,19 @@
     &.active {
       color: v.$vlight-color;
     }
+  }
+}
+
+.inner {
+  width: 95%;
+  margin: 0 auto;
+  padding: 20px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+
+  .index {
+    display: none;
   }
 
   .navlinks {
@@ -60,10 +63,16 @@
 @media (min-width: 768px) {
   .header {
     height: 6rem;
-    padding: 0 clamp(20px, 10vw, 200px);
-    justify-content: space-between;
+  }
+
+  .inner {
+    width: 60%;
+    max-width: 968px;
+    height: 100%;
+    padding: 0;
     flex-direction: row;
     align-items: center;
+    justify-content: space-between;
 
     .index {
       display: block;
@@ -75,6 +84,7 @@
       display: flex;
       justify-content: flex-end;
     }
+
     .mobile_navlinks {
       display: none;
     }

@@ -44,15 +44,23 @@ const BlogsContainer = ({ posts }) => {
       <div className={classes.search}>
         <h3>Browse by Category</h3>
         <ul>
+          <li className={classes.categoryItem}>
+            <Link
+              href="/articles"
+              className={!searchParams.get("category") ? classes.activeLink : ""}
+            >
+              <span>All Articles</span>
+              <span className={classes.count}>{posts.length}</span>
+            </Link>
+          </li>
           {Object.keys(categoriesDict).map((key) => (
-            <li key={key}>
+            <li key={key} className={classes.categoryItem}>
               <Link
-                href={{
-                  pathname: "/articles",
-                  query: { category: key },
-                }}
+                href={{ pathname: "/articles", query: { category: key } }}
+                className={searchParams.get("category") === key ? classes.activeLink : ""}
               >
-                {key} [{categoriesDict[key]}]
+                <span>{key}</span>
+                <span className={classes.count}>{categoriesDict[key]}</span>
               </Link>
             </li>
           ))}
