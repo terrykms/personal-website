@@ -30,13 +30,6 @@ const Introduction = () => {
           <Link href="/articles">technical writing</Link> to consolidate and
           share my learning.
         </p>
-        <p>
-          Currently, I'm working at{" "}
-          <span className={classes.highlight}>U-Reg</span> as a{" "}
-          <span className={classes.highlight}>Software Engineering Intern</span>
-          , where I contribute to building AI-integrated features across the
-          platform.
-        </p>
       </div>
     </div>
   );

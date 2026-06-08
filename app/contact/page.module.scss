@@ -1,0 +1,74 @@
+@use '/styles/variables' as v;
+
+.intro {
+    color: v.$mid-color;
+    margin-bottom: 2.5rem;
+}
+
+.channels {
+    display: flex;
+    flex-direction: column;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    padding: 1.25rem 0;
+    border-bottom: 1px solid v.$light-color;
+    color: inherit;
+
+    &:first-child {
+        border-top: 1px solid v.$light-color;
+    }
+
+    &:hover {
+        color: inherit;
+
+        .label {
+            color: v.$light-blue;
+        }
+
+        .arrow {
+            color: v.$light-blue;
+            transform: translate(2px, -2px);
+        }
+    }
+}
+
+.iconWrap {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    border: 1px solid v.$light-color;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    color: v.$dark-color;
+}
+
+.text {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+}
+
+.label {
+    font-size: v.$size-4;
+    font-weight: 600;
+    transition: color 0.2s ease;
+}
+
+.handle {
+    font-size: v.$size-3;
+    color: v.$mid-color;
+}
+
+.arrow {
+    color: v.$mid-color;
+    flex-shrink: 0;
+    transition: color 0.2s ease, transform 0.2s ease;
+}
