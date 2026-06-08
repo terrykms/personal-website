@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import classes from "./featured-post.box.module.scss";
 
 const FeaturedPostBox = ({ post }) => {
@@ -9,20 +10,16 @@ const FeaturedPostBox = ({ post }) => {
     year: "numeric",
   });
 
-  const loaderProp = ({ src }) => {
-    return src;
-  };
-
   const imagePath = post.thumbnail;
   return (
     <div className={classes.post}>
       <div className={classes.image}>
-        <img
+        <Image
           src={imagePath}
           alt={`Cover picture to the article "${title}".`}
-          width={100}
-          height={150}
-          // loader={loaderProp}
+          fill
+          sizes="(min-width: 768px) 300px, 100vw"
+          style={{ objectFit: "cover", objectPosition: "center" }}
         />
       </div>
       <div className={classes.description}>
