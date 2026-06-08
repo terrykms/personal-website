@@ -1,9 +1,8 @@
 @use '/styles/variables' as v;
 
 .aboutme {
+    p {
+        font-size: v.$size-4;
+    }
 }
-
-@media (min-width: 768px) {
-
-  }
 

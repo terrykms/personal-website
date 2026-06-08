@@ -12,23 +12,21 @@ const FeaturedPostBox = ({ post }) => {
 
   const imagePath = post.thumbnail;
   return (
-    <div className={classes.post}>
+    <Link href={`/articles/${postId}`} className={classes.post}>
       <div className={classes.image}>
         <Image
           src={imagePath}
           alt={`Cover picture to the article "${title}".`}
           fill
-          sizes="(min-width: 768px) 300px, 100vw"
+          sizes="(min-width: 768px) 160px, 120px"
           style={{ objectFit: "cover", objectPosition: "center" }}
         />
       </div>
       <div className={classes.description}>
-        <Link href={`/articles/${postId}`}>
-          <h3>{title}</h3>
-        </Link>
-        <span>{formattedDate}</span>
+        <h3>{title}</h3>
+        <span className={classes.date}>{formattedDate}</span>
       </div>
-    </div>
+    </Link>
   );
 };
 

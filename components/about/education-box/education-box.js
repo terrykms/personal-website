@@ -5,24 +5,23 @@ const EducationBox = (props) => {
   const { education } = props;
   return (
     <div className={classes.box}>
-      <div className={classes.image}>
-        <Image
-          src={`/images/about/${education.image}`}
-          alt={education.school}
-          width={70}
-          height={70}
-        />
+      <div className={classes.logo}>
+        <div className={classes.logoInner}>
+          <Image
+            src={`/images/about/${education.image}`}
+            alt={education.school}
+            fill
+            sizes="44px"
+            style={{ objectFit: "contain" }}
+          />
+        </div>
       </div>
       <div className={classes.content}>
-        <div className={classes.header}>
-          <h3>{education.school}</h3>
-          <span>{education.level}</span>
-          <span>{education.grade}</span>
-          <span>
-            {education.startDate} - {education.endDate}
-          </span>
-        </div>
-
+        <h3>{education.school}</h3>
+        <span className={classes.meta}>
+          {education.level} · {education.startDate}–{education.endDate}
+        </span>
+        <span className={classes.meta}>{education.grade}</span>
         <ul>
           {education.descriptions.map((description) => (
             <li key={description}>{description}</li>

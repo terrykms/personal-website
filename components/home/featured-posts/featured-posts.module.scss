@@ -1,28 +1,20 @@
 @use '/styles/variables' as v;
 
 .container {
-    display: flex;
-    flex-flow: column;
-    align-items: left;
-
-    h2 {
-        font-size: v.$size-8
-    }
-
     .button {
-        margin: 50px 0;
+        margin: 2rem 0 3rem;
         text-align: center;
+
         a {
             border: 1px solid v.$dark-color;
-            border-radius: 10px;
-            padding: 20px;
-            text-decoration: none;
-            font-style: normal;
+            border-radius: 8px;
+            padding: 0.6rem 1.5rem;
+            font-size: v.$size-4;
+            transition: border-color 0.2s ease, color 0.2s ease;
 
             &:hover {
-                box-shadow: 10px 15px;
-                color: v.$dark-color;
-                transition: all 0.3s ease-out;
+                border-color: v.$light-blue;
+                color: v.$light-blue;
             }
         }
     }

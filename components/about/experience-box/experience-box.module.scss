@@ -1,32 +1,65 @@
 @use '/styles/variables' as v;
 
-
 .box {
     display: flex;
-    flex-flow: column;
-    gap: 0 30px;
-    margin: 0 0 30px 0;
+    flex-direction: row;
+    gap: 1.25rem;
+    padding: 1.5rem 0;
+    border-bottom: 1px solid v.$light-color;
 
-    .header {
-        display: grid;
-
-
-        h3 {
-            margin: 0;
-            padding: 0;
-        }
-    }
-
-    ul {
-        padding: 0 0 0 15px;
+    &:first-child {
+        border-top: 1px solid v.$light-color;
     }
 }
 
-@media (min-width: 768px) {
-    .box {
-        flex-flow: row;
+.logo {
+    width: 56px;
+    height: 56px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    border: 1px solid v.$light-color;
+    background-color: #fff;
+    padding: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
+    .logoInner {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        border-radius: 6px;
+        overflow: hidden;
+    }
+}
+
+.content {
+    flex: 1;
+
+    h3 {
+        margin: 0 0 0.2rem 0;
+        line-height: 1.3;
     }
 
+    .meta {
+        display: block;
+        font-size: v.$size-3;
+        color: v.$mid-color;
+        margin-bottom: 0.75rem;
+    }
 
+    ul {
+        margin: 0;
+        padding: 0 0 0 1rem;
+        font-size: v.$size-3;
+        color: v.$mid-color;
+
+        li {
+            margin-bottom: 0.25rem;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
 }

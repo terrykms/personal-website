@@ -1,44 +1,60 @@
 @use '/styles/variables' as v;
 
 .post {
-    margin: 30px 0;
-    .image{
-        display: block;
-        position: relative;
-        height: 250px;
-        overflow: hidden;
-        border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    padding: 1.25rem 0;
+    border-bottom: 1px solid v.$light-color;
+    color: inherit;
+
+    &:first-child {
+        border-top: 1px solid v.$light-color;
     }
-    a {
-        font-style: normal;
+
+    &:hover {
+        color: inherit;
+
+        .description h3 {
+            color: v.$light-blue;
+        }
+    }
+
+    .image {
+        position: relative;
+        width: 120px;
+        height: 90px;
+        flex-shrink: 0;
+        border-radius: 6px;
+        overflow: hidden;
+    }
+
+    .description {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        flex: 1;
+
         h3 {
-            margin: 10px 0;
-            &:hover {
-                color: v.$light-blue;
-            }
+            margin: 0 0 0.25rem 0;
+            transition: color 0.2s ease;
+            line-height: 1.3;
+        }
+
+        .date {
+            font-size: v.$size-3;
+            color: v.$mid-color;
         }
     }
 }
 
-
-
-
-
 @media (min-width: 768px) {
-    .image {
-        width: 300px;
-    }
     .post {
-        display: grid;
-        grid-template-columns: auto 1fr;
+        gap: 1.5rem;
 
-        .description {
-            margin: 0 30px;
-
-            h3 {
-                margin: 0 0 10px 0;
-
-            }
+        .image {
+            width: 160px;
+            height: 120px;
         }
     }
 }

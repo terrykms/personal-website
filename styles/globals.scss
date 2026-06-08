@@ -85,7 +85,7 @@ main > * {
 
 @media (min-width: 768px) {
   h1 {
-    font-size: v.$size-12;
+    font-size: v.$size-10;
   }
 
   h2 {
@@ -106,12 +106,3 @@ main > * {
   }
 }
 
-@media (min-width: 1024px) {
-  h1 {
-    font-size: v.$size-16;
-  }
-
-  h2 {
-    font-size: v.$size-8;
-  }
-}
