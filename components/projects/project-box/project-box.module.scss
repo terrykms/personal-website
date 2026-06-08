@@ -1,47 +1,62 @@
 @use "/styles/variables" as v;
 
 .project {
-  background-color: v.$light-color;
-  padding: 20px;
-  border-radius: 5px;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  padding: 1.75rem 0;
+  border-bottom: 1px solid v.$light-color;
 
-  &:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
+  &:first-child {
+    border-top: 1px solid v.$light-color;
   }
 
-  h2 {
-    font-size: v.$size-5;
-    margin: 0 0 10px 0;
-  }
+  .header {
+    margin-bottom: 0.6rem;
 
-  a {
-    color: v.$light-blue;
-    display: block;
-    margin: 0 0 10px 0;
-    text-decoration: none;
+    h2 {
+      margin: 0;
+      font-size: v.$size-5;
+    }
 
-    &:hover {
-      text-decoration: underline;
+    .titleLink {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 1rem;
+      color: inherit;
+
+      h2 {
+        transition: color 0.2s ease;
+      }
+
+      svg {
+        color: v.$mid-color;
+        flex-shrink: 0;
+        margin-top: 3px;
+        transition: color 0.2s ease;
+      }
+
+      &:hover h2 {
+        color: v.$light-blue;
+      }
+
+      &:hover svg {
+        color: v.$light-blue;
+      }
     }
   }
 
   .summary {
-    margin: 0 0 10px 0;
+    color: v.$mid-color;
+    line-height: 1.6;
+    margin-bottom: 0.75rem;
   }
 
   .keywords {
-    display: flex;
-    column-gap: 10px;
     font-size: v.$size-3;
+    color: v.$mid-color;
     font-style: italic;
 
-    .keyword {
-      text-align: center;
-      background-color: v.$vlight-color;
-      padding: 5px;
-      border-radius: 10px;
+    .dot {
+      user-select: none;
     }
   }
 }

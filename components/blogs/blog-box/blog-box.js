@@ -14,21 +14,21 @@ const BlogBox = ({ post }) => {
   const imagePath = thumbnail;
 
   return (
-    <div className={classes.post}>
-      <Link className={classes.image} href={`/articles/${postId}`}>
+    <Link href={`/articles/${postId}`} className={classes.post}>
+      <div className={classes.image}>
         <Image
           src={imagePath}
           alt={`Cover picture to the article "${title}".`}
           fill
-          sizes="(min-width: 768px) 50vw, 100vw"
+          sizes="(min-width: 768px) 160px, 120px"
           style={{ objectFit: "cover", objectPosition: "center" }}
         />
-      </Link>
+      </div>
       <div className={classes.description}>
         <h2>{title}</h2>
         <div className={classes.date}>{formattedDate}</div>
       </div>
-    </div>
+    </Link>
   );
 };
 
