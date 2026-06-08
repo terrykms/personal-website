@@ -19,6 +19,6 @@
 
 @media (min-width: 768px) {
   .footer {
-    padding: 20px 200px 0;
+    padding: 20px clamp(20px, 10vw, 200px) 0;
   }
 }
