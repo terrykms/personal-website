@@ -15,15 +15,17 @@ const BlogBox = ({ post }) => {
 
   return (
     <Link href={`/articles/${postId}`} className={classes.post}>
-      <div className={classes.image}>
-        <Image
-          src={imagePath}
-          alt={`Cover picture to the article "${title}".`}
-          fill
-          sizes="(min-width: 768px) 160px, 120px"
-          style={{ objectFit: "cover", objectPosition: "center" }}
-        />
-      </div>
+      {imagePath && (
+        <div className={classes.image}>
+          <Image
+            src={imagePath}
+            alt={`Cover picture to the article "${title}".`}
+            fill
+            sizes="(min-width: 768px) 160px, 120px"
+            style={{ objectFit: "cover", objectPosition: "center" }}
+          />
+        </div>
+      )}
       <div className={classes.description}>
         <h2>{title}</h2>
         <div className={classes.date}>{formattedDate}</div>
