@@ -1,4 +1,3 @@
-import { Link } from "lucide-react";
 import classes from "./project-box.module.scss";
 
 const ProjectBox = ({ project }) => {

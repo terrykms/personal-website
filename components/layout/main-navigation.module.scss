@@ -41,9 +41,18 @@
     margin: 0;
     padding: 0;
     gap: 0.25rem;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.3s ease, opacity 0.25s ease;
 
     li {
       margin: 10px 0 0 0;
+    }
+
+    &.mobile_navlinks_open {
+      max-height: 300px;
+      opacity: 1;
     }
   }
 }
@@ -51,7 +60,7 @@
 @media (min-width: 768px) {
   .header {
     height: 6rem;
-    padding: 0px 200px;
+    padding: 0 clamp(20px, 10vw, 200px);
     justify-content: space-between;
     flex-direction: row;
     align-items: center;
