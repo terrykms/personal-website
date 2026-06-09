@@ -2,12 +2,26 @@
   "experiences": [
     {
       "position": "Software Engineering Intern",
+      "company": "GovTech",
+      "startDate": "Jan 2026",
+      "endDate": "May 2026",
+      "image": "govtech.png",
+      "descriptions": [
+        "Built an end-to-end A/B Testing feature for SearchSG, GovTech's government search portal, spanning React frontend, backend APIs, integration testing, and AWS Lambda background jobs.",
+        "Automated the A/B test notification lifecycle via 3 AWS Lambda scheduled jobs, sending milestone emails and triggering automatic banner reversion at test completion.",
+        "Eliminated component duplication across a 5-step A/B test creation flow by extracting shared React components, improving maintainability and accelerating future feature development."
+      ]
+    },
+    {
+      "position": "Software Engineering Intern",
       "company": "U-Reg",
       "startDate": "Jul 2025",
-      "endDate": "Present",
+      "endDate": "Dec 2025",
       "image": "u-reg.jpeg",
       "descriptions": [
-        "Working on full-stack feature development and integration of LLM-powered AI tools into the regulatory intelligence platform."
+        "Led development of Source-of-Wealth investigations, integrating AI features with robust error handling, edit tracking, and in-app notifications to improve reliability and user experience.",
+        "Designed and implemented the database schema and JSONB structures supporting AI data responses, including read/write operations for nested fields.",
+        "Improved investigation editing experience by building form validation flows, custom error messaging, and dynamic rendering of deeply nested JSON structures."
       ]
     },
     {

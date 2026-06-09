@@ -12,14 +12,21 @@
     
     input,
     textarea {
-    border-radius: 4px;
-    padding: 10px 5px;
-    width: 100%;
-    border: 1px solid v.$dark-color;
-    background-color: v.$light-color;
-    resize: none;
-    margin: 0 0 20px 0;
-    } 
+        border-radius: 4px;
+        padding: 10px 5px;
+        width: 100%;
+        border: 1px solid v.$dark-color;
+        background-color: v.$light-color;
+        resize: none;
+        margin: 0 0 20px 0;
+        transition: border-color 0.2s ease, box-shadow 0.2s ease;
+
+        &:focus {
+            outline: none;
+            border-color: v.$light-blue;
+            box-shadow: 0 0 0 3px rgba(69, 162, 158, 0.2);
+        }
+    }
 }
 
  

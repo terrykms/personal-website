@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import classes from "./blog-box.module.scss";
 
 const BlogBox = ({ post }) => {
@@ -13,20 +14,23 @@ const BlogBox = ({ post }) => {
   const imagePath = thumbnail;
 
   return (
-    <div className={classes.post}>
-      <Link className={classes.image} href={`/articles/${postId}`}>
-        <img
-          src={imagePath}
-          alt={`Cover picture to the article "${title}".`}
-          width={600}
-          height={300}
-        />
-      </Link>
+    <Link href={`/articles/${postId}`} className={classes.post}>
+      {imagePath && (
+        <div className={classes.image}>
+          <Image
+            src={imagePath}
+            alt={`Cover picture to the article "${title}".`}
+            fill
+            sizes="(min-width: 768px) 160px, 120px"
+            style={{ objectFit: "cover", objectPosition: "center" }}
+          />
+        </div>
+      )}
       <div className={classes.description}>
         <h2>{title}</h2>
         <div className={classes.date}>{formattedDate}</div>
       </div>
-    </div>
+    </Link>
   );
 };
 
