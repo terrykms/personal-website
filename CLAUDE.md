@@ -28,7 +28,7 @@ Next.js 15 App Router site, plain JS (no TypeScript), SCSS Modules for styling. 
 
 ### Notable dependencies not wired up
 
-`mongodb`, `swr`, `react-markdown`, `remark`, `remark-html`, and `gray-matter` are listed in `package.json` but are not imported anywhere in current source — the contact page (`app/contact/page.js`) is static links (no form submission backend), and blog content comes from the sanitized Medium HTML path above rather than local markdown. `components/form/form-button` and `components/form/form-input` are similarly unused leftovers. Don't assume these are wired into a working feature without checking; if extending contact/blog functionality, this may be dead code worth removing rather than building on.
+`mongodb`, `swr`, `react-markdown`, `remark`, and `remark-html` are listed in `package.json` but are not imported anywhere in current source — the contact page (`app/contact/page.js`) is static links (no form submission backend), and blog content comes from the sanitized Medium HTML path above rather than local markdown. `components/form/form-button` and `components/form/form-input` are similarly unused leftovers. Don't assume these are wired into a working feature without checking; if extending contact/blog functionality, this may be dead code worth removing rather than building on.
 
 ## Security/deps
 
