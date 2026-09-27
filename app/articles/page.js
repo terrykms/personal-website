@@ -2,6 +2,12 @@ import { Suspense } from "react";
 import { getMediumPosts } from "@/lib/medium";
 import BlogsContainer from "@/components/blogs/blogs-container/blogs-container";
 
+export const metadata = {
+  title: "Articles",
+  description:
+    "Technical writing by Minseo Kim on software development, data structures and the things I build.",
+};
+
 const ArticlesPage = async () => {
   const { status, items } = await getMediumPosts();
   return (

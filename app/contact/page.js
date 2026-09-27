@@ -2,6 +2,12 @@ import Image from "next/image";
 import { Mail, ArrowUpRight } from "lucide-react";
 import classes from "./page.module.scss";
 
+export const metadata = {
+  title: "Contact",
+  description:
+    "Get in touch with Minseo Kim via email, LinkedIn, GitHub or Medium.",
+};
+
 const channels = [
   {
     icon: null,

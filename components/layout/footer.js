@@ -37,7 +37,7 @@ const Footer = () => {
           >
             <Image
               src={"/icons/medium.svg"}
-              alt="Github Logo"
+              alt="Medium Logo"
               width={40}
               height={40}
             />

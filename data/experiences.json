@@ -1,6 +1,14 @@
 {
   "experiences": [
     {
+      "position": "Software Engineer (Management Associate)",
+      "company": "DBS Bank",
+      "startDate": "Jul 2026",
+      "endDate": "Present",
+      "image": "dbs-bank.png",
+      "descriptions": ["Wealth Management Technology"]
+    },
+    {
       "position": "Software Engineering Intern",
       "company": "GovTech",
       "startDate": "Jan 2026",

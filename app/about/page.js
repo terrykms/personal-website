@@ -5,6 +5,12 @@ import AboutMe from "@/components/about/about-me/about-me";
 import Experiences from "@/components/about/experiences/experiences";
 import Education from "@/components/about/education/education";
 
+export const metadata = {
+  title: "About",
+  description:
+    "Minseo Kim's background, software engineering experience and education.",
+};
+
 const AboutPage = () => {
   const experienceData = getJSONData("experiences.json");
   const educationData = getJSONData("education.json");

@@ -8,12 +8,13 @@ import { oswald, openSans } from "@/lib/fonts";
 export const viewport = {
   width: "device-width",
   initialScale: 1,
-  maximumScale: 1,
-  userScalable: false,
 };
 
 export const metadata = {
-  title: "Minseo's Personal Website",
+  title: {
+    default: "Minseo Kim",
+    template: "%s · Minseo Kim",
+  },
   description:
     "A personal website showcasing my projects, interests, and professional journey in software engineering and entrepreneurship.",
   icons: {
