@@ -3,9 +3,9 @@ import { getJSONData } from "../../lib/utils";
 import { Fragment } from "react";
 
 export const metadata = {
-  title: "Projects by Minseo",
+  title: "Projects",
   description:
-    "Passionate about software development and entrepreneurship, I'm always looking out for opportunities in how software platforms can add value to people's lives and solves their needs.",
+    "Software, research and other projects by Minseo Kim.",
 };
 
 const ProjectPage = () => {
