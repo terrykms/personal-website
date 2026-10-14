@@ -1,0 +1,27 @@
+@use "/styles/variables" as v;
+
+.notFound {
+  margin: 4rem 0;
+  text-align: center;
+
+  .links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 2rem;
+
+    a {
+      border: 1px solid v.$dark-color;
+      border-radius: 8px;
+      padding: 0.6rem 1.5rem;
+      font-size: v.$size-4;
+      transition: border-color 0.2s ease, color 0.2s ease;
+
+      &:hover {
+        border-color: v.$light-blue;
+        color: v.$light-blue;
+      }
+    }
+  }
+}
