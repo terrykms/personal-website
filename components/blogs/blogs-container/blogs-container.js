@@ -1,18 +1,17 @@
 "use client";
 import Link from "next/link";
-import { useEffect, useState, useMemo } from "react";
+import { useMemo } from "react";
 import { useSearchParams } from "next/navigation";
 import BlogBox from "../blog-box/blog-box";
 import classes from "./blogs-container.module.scss";
 
 const BlogsContainer = ({ posts }) => {
-  const [filteredArticles, setFilteredArticles] = useState(posts);
   const searchParams = useSearchParams();
+  const selectedCategory = searchParams.get("category");
 
-  // Memoizing category counts to avoid recalculating on every render
   const categoriesDict = useMemo(() => {
     const dict = {};
-    posts?.forEach((post) => {
+    posts.forEach((post) => {
       post.categories.forEach((category) => {
         dict[category] = (dict[category] || 0) + 1;
       });
@@ -20,19 +19,9 @@ const BlogsContainer = ({ posts }) => {
     return dict;
   }, [posts]);
 
-  useEffect(() => {
-    const category = searchParams.get("category");
-    if (!category) {
-      setFilteredArticles(posts); // Reset to all posts when no category is selected
-      return;
-    }
-
-    const newArticlesArray = posts?.filter((post) =>
-      post.categories.includes(category)
-    );
-
-    setFilteredArticles(newArticlesArray);
-  }, [searchParams.toString(), posts]); // Ensure re-renders only when necessary
+  const filteredArticles = selectedCategory
+    ? posts.filter((post) => post.categories.includes(selectedCategory))
+    : posts;
 
   return (
     <div className={classes.container}>
@@ -47,7 +36,7 @@ const BlogsContainer = ({ posts }) => {
           <li className={classes.categoryItem}>
             <Link
               href="/articles"
-              className={!searchParams.get("category") ? classes.activeLink : ""}
+              className={!selectedCategory ? classes.activeLink : ""}
             >
               <span>All Articles</span>
               <span className={classes.count}>{posts.length}</span>
@@ -57,7 +46,7 @@ const BlogsContainer = ({ posts }) => {
             <li key={key} className={classes.categoryItem}>
               <Link
                 href={{ pathname: "/articles", query: { category: key } }}
-                className={searchParams.get("category") === key ? classes.activeLink : ""}
+                className={selectedCategory === key ? classes.activeLink : ""}
               >
                 <span>{key}</span>
                 <span className={classes.count}>{categoriesDict[key]}</span>

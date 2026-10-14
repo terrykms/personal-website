@@ -16,7 +16,7 @@ const Introduction = () => {
       <div className={classes.content}>
         <h1>Minseo Kim</h1>
         <p>
-          I'm a software engineer at{" "}
+          I&apos;m a software engineer at{" "}
           <span className={classes.highlight}>DBS Bank</span> in Singapore,
           working in Wealth Management Technology. Previously, I built
           end-to-end A/B testing for SearchSG at{" "}

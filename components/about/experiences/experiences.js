@@ -9,7 +9,7 @@ const Experiences = (props) => {
       <h2>Experiences</h2>
       <div className={classes.experiences}>
         {data.map((experience) => (
-          <ExperienceBox experience={experience} key={experience.position} />
+          <ExperienceBox experience={experience} key={`${experience.position}-${experience.company}`} />
         ))}
       </div>
     </section>

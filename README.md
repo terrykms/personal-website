@@ -17,7 +17,7 @@ Open [http://localhost:3000](http://localhost:3000).
 npm run dev     # start dev server
 npm run build   # production build (also prerenders all pages)
 npm run start   # serve the production build
-npm run lint    # next lint
+npm run lint    # eslint .
 ```
 
 ## Structure

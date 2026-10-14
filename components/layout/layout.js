@@ -8,7 +8,6 @@ const Layout = (props) => {
     <Fragment>
       <MainNavigation />
       <main>{props.children}</main>
-      <div id="notifications"></div>
       <Footer />
     </Fragment>
   );

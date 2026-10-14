@@ -15,7 +15,7 @@
   &:hover {
     color: inherit;
 
-    .description h2 {
+    .description .title {
       color: v.$light-blue;
     }
   }
@@ -35,7 +35,7 @@
     justify-content: space-between;
     flex: 1;
 
-    h2 {
+    .title {
       margin: 0 0 0.25rem 0;
       font-size: v.$size-5;
       line-height: 1.3;

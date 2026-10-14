@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { Mail, ArrowUpRight } from "lucide-react";
+import { socials } from "@/lib/socials";
 import classes from "./page.module.scss";
 
 export const metadata = {
@@ -17,27 +18,7 @@ const channels = [
     href: "mailto:minseokim.sg@gmail.com",
     external: false,
   },
-  {
-    icon: "/icons/linkedin.svg",
-    label: "LinkedIn",
-    handle: "minseokim-ms",
-    href: "https://www.linkedin.com/in/minseokim-ms/",
-    external: true,
-  },
-  {
-    icon: "/icons/github.svg",
-    label: "GitHub",
-    handle: "terrykms",
-    href: "https://github.com/terrykms",
-    external: true,
-  },
-  {
-    icon: "/icons/medium.svg",
-    label: "Medium",
-    handle: "@minseo_kim",
-    href: "https://medium.com/@minseo_kim",
-    external: true,
-  },
+  ...socials.map((social) => ({ ...social, external: true })),
 ];
 
 const ContactPage = () => {
