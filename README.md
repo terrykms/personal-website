@@ -18,6 +18,7 @@ npm run dev     # start dev server
 npm run build   # production build (also prerenders all pages)
 npm run start   # serve the production build
 npm run lint    # eslint .
+npm run articles:archive  # snapshot the Medium feed into data/articles.json
 ```
 
 ## Structure
@@ -28,6 +29,6 @@ npm run lint    # eslint .
 - `lib/` — `medium.js` (fetches posts from the Medium RSS feed at build time), `fonts.js`, `utils.js`
 - `styles/` — global SCSS and shared variables
 
-Articles are not stored locally — the `/articles` pages are statically generated at build time from the author's Medium RSS feed.
+Articles come from the author's Medium RSS feed, merged with the `data/articles.json` archive (the feed only returns the latest 10 posts). Article pages revalidate hourly, so new posts appear without a redeploy; run `npm run articles:archive` after publishing to keep older posts once they fall out of the feed.
 
 See `CLAUDE.md` for a more detailed architecture overview.

@@ -4,19 +4,32 @@ import { SpeedInsights } from "@vercel/speed-insights/next";
 
 import Layout from "@/components/layout/layout";
 import { oswald, openSans } from "@/lib/fonts";
+import { SITE_URL } from "@/lib/site";
 
 export const viewport = {
   width: "device-width",
   initialScale: 1,
 };
 
+const description =
+  "A personal website showcasing my projects, interests, and professional journey in software engineering and entrepreneurship.";
+
 export const metadata = {
+  metadataBase: new URL(SITE_URL),
   title: {
     default: "Minseo Kim",
     template: "%s · Minseo Kim",
   },
-  description:
-    "A personal website showcasing my projects, interests, and professional journey in software engineering and entrepreneurship.",
+  description,
+  openGraph: {
+    type: "website",
+    siteName: "Minseo Kim",
+    title: "Minseo Kim",
+    description,
+  },
+  twitter: {
+    card: "summary_large_image",
+  },
   icons: {
     apple: "/favicon/apple-touch-icon.png",
     icon: [

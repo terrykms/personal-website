@@ -1,0 +1,141 @@
+{
+  "articles": [
+    {
+      "guid": "https://medium.com/p/f7e44fe36968",
+      "title": "Two Years of National Service: A Reflection",
+      "pubDate": "2025-07-03 07:43:47",
+      "link": "https://medium.com/@minseo_kim/two-years-of-national-service-a-reflection-f7e44fe36968?source=rss-a316dca889cd------2",
+      "categories": [
+        "productivity",
+        "growth",
+        "reflections"
+      ],
+      "description": "<div class=\"medium-feed-item\">\n<p class=\"medium-feed-image\"><a href=\"https://medium.com/@minseo_kim/two-years-of-national-service-a-reflection-f7e44fe36968?source=rss-a316dca889cd------2\"><img src=\"https://cdn-images-1.medium.com/max/2600/0*kwhGMeYTDgK4hHbj\" width=\"5296\"></a></p>\n<p class=\"medium-feed-snippet\">How I turned my National Service years into a time for growth and opportunities.</p>\n<p class=\"medium-feed-link\"><a href=\"https://medium.com/@minseo_kim/two-years-of-national-service-a-reflection-f7e44fe36968?source=rss-a316dca889cd------2\">Continue reading on Medium »</a></p>\n</div>"
+    },
+    {
+      "guid": "https://medium.com/p/8ae52249a2a9",
+      "title": "How I Built a Spreadsheet-Style Interface with React Context",
+      "pubDate": "2025-05-08 15:27:09",
+      "link": "https://blog.stackademic.com/how-i-built-a-spreadsheet-style-interface-with-react-context-8ae52249a2a9?source=rss-a316dca889cd------2",
+      "categories": [
+        "programming",
+        "javascript",
+        "nextjs",
+        "react",
+        "front-end-development"
+      ],
+      "description": "<div class=\"medium-feed-item\">\n<p class=\"medium-feed-image\"><a href=\"https://blog.stackademic.com/how-i-built-a-spreadsheet-style-interface-with-react-context-8ae52249a2a9?source=rss-a316dca889cd------2\"><img src=\"https://cdn-images-1.medium.com/max/2380/1*VFZxuSX15OVdn4yuhyjvzQ.png\" width=\"2380\"></a></p>\n<p class=\"medium-feed-snippet\">Solving state sync in editable tables with React’s built-in Context</p>\n<p class=\"medium-feed-link\"><a href=\"https://blog.stackademic.com/how-i-built-a-spreadsheet-style-interface-with-react-context-8ae52249a2a9?source=rss-a316dca889cd------2\">Continue reading on Stackademic »</a></p>\n</div>"
+    },
+    {
+      "guid": "https://medium.com/p/9d91b0a2115c",
+      "title": "How I Use Supabase RPCs in My Next.js Projects",
+      "pubDate": "2025-04-14 16:26:01",
+      "link": "https://blog.stackademic.com/how-i-use-supabase-rpcs-in-my-next-js-projects-9d91b0a2115c?source=rss-a316dca889cd------2",
+      "categories": [
+        "sql",
+        "database",
+        "javascript",
+        "programming",
+        "nextjs"
+      ],
+      "description": "<div class=\"medium-feed-item\">\n<p class=\"medium-feed-image\"><a href=\"https://blog.stackademic.com/how-i-use-supabase-rpcs-in-my-next-js-projects-9d91b0a2115c?source=rss-a316dca889cd------2\"><img src=\"https://cdn-images-1.medium.com/max/1200/1*qSoBQyS0_PfeHJ2V6y6RhQ.png\" width=\"1200\"></a></p>\n<p class=\"medium-feed-snippet\">In Supabase, RPCs let you run PostgreSQL functions directly from the client, almost like calling an API.</p>\n<p class=\"medium-feed-link\"><a href=\"https://blog.stackademic.com/how-i-use-supabase-rpcs-in-my-next-js-projects-9d91b0a2115c?source=rss-a316dca889cd------2\">Continue reading on Stackademic »</a></p>\n</div>"
+    },
+    {
+      "guid": "https://medium.com/p/268e0faf5700",
+      "title": "Migrating my Next.js Web Application from Pages to App Router",
+      "pubDate": "2025-04-07 06:17:21",
+      "link": "https://blog.stackademic.com/migrating-my-next-js-web-application-from-pages-to-app-router-268e0faf5700?source=rss-a316dca889cd------2",
+      "categories": [
+        "nextjs",
+        "front-end-development",
+        "javascript",
+        "programming"
+      ],
+      "description": "<div class=\"medium-feed-item\">\n<p class=\"medium-feed-image\"><a href=\"https://blog.stackademic.com/migrating-my-next-js-web-application-from-pages-to-app-router-268e0faf5700?source=rss-a316dca889cd------2\"><img src=\"https://cdn-images-1.medium.com/max/1200/1*8eQoaSgs8eLraPqepBOHNg.png\" width=\"1200\"></a></p>\n<p class=\"medium-feed-snippet\">7 key steps to seamlessly update your next.js application</p>\n<p class=\"medium-feed-link\"><a href=\"https://blog.stackademic.com/migrating-my-next-js-web-application-from-pages-to-app-router-268e0faf5700?source=rss-a316dca889cd------2\">Continue reading on Stackademic »</a></p>\n</div>"
+    },
+    {
+      "guid": "https://medium.com/p/f96d563df87c",
+      "title": "Jump Game: A Greedy Approach to Solving the Problem",
+      "pubDate": "2025-03-03 06:58:18",
+      "link": "https://blog.stackademic.com/jump-game-a-greedy-approach-to-solving-the-problem-f96d563df87c?source=rss-a316dca889cd------2",
+      "categories": [
+        "programming",
+        "python",
+        "algorithms",
+        "leetcode",
+        "data-structures"
+      ],
+      "description": "<div class=\"medium-feed-item\">\n<p class=\"medium-feed-image\"><a href=\"https://blog.stackademic.com/jump-game-a-greedy-approach-to-solving-the-problem-f96d563df87c?source=rss-a316dca889cd------2\"><img src=\"https://cdn-images-1.medium.com/max/1200/1*cQNtRSf-3wKdnucu17FVbA.png\" width=\"1200\"></a></p>\n<p class=\"medium-feed-snippet\">Making locally optimal choices to efficiently achieve a globally optimal outcome.</p>\n<p class=\"medium-feed-link\"><a href=\"https://blog.stackademic.com/jump-game-a-greedy-approach-to-solving-the-problem-f96d563df87c?source=rss-a316dca889cd------2\">Continue reading on Stackademic »</a></p>\n</div>"
+    },
+    {
+      "guid": "https://medium.com/p/293f8a99c2b4",
+      "title": "Find Median from Data Stream",
+      "pubDate": "2025-03-03 06:44:39",
+      "link": "https://blog.stackademic.com/find-median-from-data-stream-293f8a99c2b4?source=rss-a316dca889cd------2",
+      "categories": [
+        "leetcode",
+        "data-structures",
+        "algorithms",
+        "programming",
+        "python"
+      ],
+      "description": "<div class=\"medium-feed-item\">\n<p class=\"medium-feed-image\"><a href=\"https://blog.stackademic.com/find-median-from-data-stream-293f8a99c2b4?source=rss-a316dca889cd------2\"><img src=\"https://cdn-images-1.medium.com/max/940/1*VSFFrh4N1wKKiV_-9ll4AA.png\" width=\"940\"></a></p>\n<p class=\"medium-feed-snippet\">Efficient approach using two heaps</p>\n<p class=\"medium-feed-link\"><a href=\"https://blog.stackademic.com/find-median-from-data-stream-293f8a99c2b4?source=rss-a316dca889cd------2\">Continue reading on Stackademic »</a></p>\n</div>"
+    },
+    {
+      "guid": "https://medium.com/p/21f5698d009a",
+      "title": "Navigating the Pacific Atlantic Water Flow Problem",
+      "pubDate": "2025-03-03 06:19:42",
+      "link": "https://blog.stackademic.com/navigating-the-pacific-atlantic-water-flow-problem-21f5698d009a?source=rss-a316dca889cd------2",
+      "categories": [
+        "leetcode",
+        "programming",
+        "algorithms",
+        "graph",
+        "python"
+      ],
+      "description": "<div class=\"medium-feed-item\">\n<p class=\"medium-feed-image\"><a href=\"https://blog.stackademic.com/navigating-the-pacific-atlantic-water-flow-problem-21f5698d009a?source=rss-a316dca889cd------2\"><img src=\"https://cdn-images-1.medium.com/max/940/1*1lw33YOEwblEcVl3iB920w.png\" width=\"940\"></a></p>\n<p class=\"medium-feed-snippet\">Reverse engineering and combining two results together.</p>\n<p class=\"medium-feed-link\"><a href=\"https://blog.stackademic.com/navigating-the-pacific-atlantic-water-flow-problem-21f5698d009a?source=rss-a316dca889cd------2\">Continue reading on Stackademic »</a></p>\n</div>"
+    },
+    {
+      "guid": "https://medium.com/p/9bde67e03d70",
+      "title": "Clone Graph",
+      "pubDate": "2025-02-24 02:10:10",
+      "link": "https://blog.stackademic.com/clone-graph-9bde67e03d70?source=rss-a316dca889cd------2",
+      "categories": [
+        "python",
+        "programming",
+        "leetcode",
+        "graph",
+        "algorithms"
+      ],
+      "description": "<div class=\"medium-feed-item\">\n<p class=\"medium-feed-image\"><a href=\"https://blog.stackademic.com/clone-graph-9bde67e03d70?source=rss-a316dca889cd------2\"><img src=\"https://cdn-images-1.medium.com/max/940/1*IFw2fydgZ3lun76lJRW-4A.png\" width=\"940\"></a></p>\n<p class=\"medium-feed-snippet\">Exploring both BFS and DFS approach</p>\n<p class=\"medium-feed-link\"><a href=\"https://blog.stackademic.com/clone-graph-9bde67e03d70?source=rss-a316dca889cd------2\">Continue reading on Stackademic »</a></p>\n</div>"
+    },
+    {
+      "guid": "https://medium.com/p/2ee5098f77ca",
+      "title": "Rotting Oranges",
+      "pubDate": "2025-02-24 02:04:57",
+      "link": "https://blog.stackademic.com/rotting-oranges-2ee5098f77ca?source=rss-a316dca889cd------2",
+      "categories": [
+        "programming",
+        "algorithms",
+        "leetcode",
+        "graph",
+        "python"
+      ],
+      "description": "<div class=\"medium-feed-item\">\n<p class=\"medium-feed-image\"><a href=\"https://blog.stackademic.com/rotting-oranges-2ee5098f77ca?source=rss-a316dca889cd------2\"><img src=\"https://cdn-images-1.medium.com/max/940/1*uetOgMOFQbfJdV1GobQvwg.png\" width=\"940\"></a></p>\n<p class=\"medium-feed-snippet\">Seeing oranges rot through breadth-first search</p>\n<p class=\"medium-feed-link\"><a href=\"https://blog.stackademic.com/rotting-oranges-2ee5098f77ca?source=rss-a316dca889cd------2\">Continue reading on Stackademic »</a></p>\n</div>"
+    },
+    {
+      "guid": "https://medium.com/p/8582ea2d1f5a",
+      "title": "Constructing Binary Tree from Preorder and Inorder Traversal",
+      "pubDate": "2025-02-17 04:36:49",
+      "link": "https://blog.stackademic.com/constructing-binary-tree-from-preorder-and-inorder-traversal-8582ea2d1f5a?source=rss-a316dca889cd------2",
+      "categories": [
+        "recursion",
+        "leetcode",
+        "binary-tree",
+        "programming",
+        "python"
+      ],
+      "description": "<div class=\"medium-feed-item\">\n<p class=\"medium-feed-image\"><a href=\"https://blog.stackademic.com/constructing-binary-tree-from-preorder-and-inorder-traversal-8582ea2d1f5a?source=rss-a316dca889cd------2\"><img src=\"https://cdn-images-1.medium.com/max/940/1*cTtcbmpZYfywL8Wcb3s45w.png\" width=\"940\"></a></p>\n<p class=\"medium-feed-snippet\">Identifying patterns in traversals and breaking down into sub-problems</p>\n<p class=\"medium-feed-link\"><a href=\"https://blog.stackademic.com/constructing-binary-tree-from-preorder-and-inorder-traversal-8582ea2d1f5a?source=rss-a316dca889cd------2\">Continue reading on Stackademic »</a></p>\n</div>"
+    }
+  ]
+}

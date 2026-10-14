@@ -2,15 +2,20 @@ import { notFound } from "next/navigation";
 import { getMediumPosts, getSingleMediumPost } from "@/lib/medium";
 import BlogContent from "@/components/blogs/blog-content/blog-content";
 
-// Only the posts fetched at build time exist; anything else is a 404.
-export const dynamicParams = false;
+// Slugs not built at deploy time are rendered on demand, so posts published
+// since the last deploy work; slugs that match no post 404 via notFound().
 
 export const generateMetadata = async ({ params }) => {
   const { postId } = await params;
   const postData = await getSingleMediumPost(postId);
   if (!postData) return {};
 
-  const description = postData.description
+  // Prefer Medium's one-line snippet over the whole feed item, which ends in
+  // a "Continue reading on ..." link.
+  const snippet = postData.description.match(
+    /<p class="medium-feed-snippet">([\s\S]*?)<\/p>/
+  );
+  const description = (snippet ? snippet[1] : postData.description)
     .replace(/<[^>]+>/g, " ")
     .replace(/\s+/g, " ")
     .trim()
@@ -20,6 +25,15 @@ export const generateMetadata = async ({ params }) => {
     title: postData.title,
     description,
     alternates: { canonical: postData.link.split("?")[0] },
+    openGraph: {
+      type: "article",
+      siteName: "Minseo Kim",
+      title: postData.title,
+      description,
+      url: `/articles/${postId}`,
+      publishedTime: new Date(postData.pubDate).toISOString(),
+      ...(postData.thumbnail && { images: [postData.thumbnail] }),
+    },
   };
 };
 
