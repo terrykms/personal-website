@@ -1,5 +1,9 @@
+import { notFound } from "next/navigation";
 import { getMediumPosts, getSingleMediumPost } from "@/lib/medium";
 import BlogContent from "@/components/blogs/blog-content/blog-content";
+
+// Only the posts fetched at build time exist; anything else is a 404.
+export const dynamicParams = false;
 
 export const generateMetadata = async ({ params }) => {
   const { postId } = await params;
@@ -22,6 +26,7 @@ export const generateMetadata = async ({ params }) => {
 const BlogPost = async ({ params }) => {
   const { postId } = await params;
   const postData = await getSingleMediumPost(postId);
+  if (!postData) notFound();
 
   return <BlogContent post={postData} key={postId} />;
 };
