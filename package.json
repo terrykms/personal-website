@@ -14,7 +14,7 @@
     "@vercel/speed-insights": "^1.2.0",
     "isomorphic-dompurify": "^3.8.0",
     "lucide-react": "^0.507.0",
-    "next": "^15.5.27",
+    "next": "^15.5.29",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "sass": "^1.99.0",
